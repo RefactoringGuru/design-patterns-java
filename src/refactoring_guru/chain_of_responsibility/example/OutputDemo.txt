@@ -1,0 +1,10 @@
+Enter email: admin@example.com
+Input password: admin_pass
+Hello, admin!
+Authorization have been successful!
+
+
+Enter email: user@example.com
+Input password: user_pass
+Hello, user!
+Authorization have been successful!
