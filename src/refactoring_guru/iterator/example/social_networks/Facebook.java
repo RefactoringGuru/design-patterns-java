@@ -74,12 +74,12 @@ public class Facebook implements SocialNetwork {
     }
 
     @Override
-    public ProfileIterator getFriendsIterator(String profileEmail) {
+    public ProfileIterator createFriendsIterator(String profileEmail) {
         return new FacebookIterator(this, "friends", profileEmail);
     }
 
     @Override
-    public ProfileIterator getCoworkersIterator(String profileEmail) {
+    public ProfileIterator createCoworkersIterator(String profileEmail) {
         return new FacebookIterator(this, "coworkers", profileEmail);
     }
 

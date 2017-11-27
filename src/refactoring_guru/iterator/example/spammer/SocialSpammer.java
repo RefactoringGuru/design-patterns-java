@@ -14,7 +14,7 @@ public class SocialSpammer {
 
     public void sendSpamToFriends(String profileEmail, String message) {
         System.out.println("\nIterating over friends...\n");
-        iterator = network.getFriendsIterator(profileEmail);
+        iterator = network.createFriendsIterator(profileEmail);
         while (iterator.hasNext()) {
             Profile profile = iterator.getNext();
             sendMessage(profile.getEmail(), message);
@@ -23,7 +23,7 @@ public class SocialSpammer {
 
     public void sendSpamToCoworkers(String profileEmail, String message) {
         System.out.println("\nIterating over coworkers...\n");
-        iterator = network.getCoworkersIterator(profileEmail);
+        iterator = network.createCoworkersIterator(profileEmail);
         while (iterator.hasNext()) {
             Profile profile = iterator.getNext();
             sendMessage(profile.getEmail(), message);

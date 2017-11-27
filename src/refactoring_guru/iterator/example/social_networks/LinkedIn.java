@@ -74,12 +74,12 @@ public class LinkedIn implements SocialNetwork {
     }
 
     @Override
-    public ProfileIterator getFriendsIterator(String profileEmail) {
+    public ProfileIterator createFriendsIterator(String profileEmail) {
         return new LinkedInIterator(this, "friends", profileEmail);
     }
 
     @Override
-    public ProfileIterator getCoworkersIterator(String profileEmail) {
+    public ProfileIterator createCoworkersIterator(String profileEmail) {
         return new LinkedInIterator(this, "coworkers", profileEmail);
     }
 }
