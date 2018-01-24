@@ -18,10 +18,6 @@ public class EncryptionDecorator extends DataSourceDecorator {
         return decode(super.readData());
     }
 
-    public String readDecodedData() {
-        return decode(super.readData());
-    }
-
     public String encode(String data) {
         byte[] result = data.getBytes();
         for (int i = 0; i < result.length; i++) {
