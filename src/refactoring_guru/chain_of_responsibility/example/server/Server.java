@@ -11,7 +11,7 @@ import java.util.Map;
  * RU: Класс сервера.
  */
 public class Server {
-    private static Map<String, String> users = new HashMap<>();
+    private Map<String, String> users = new HashMap<>();
     private Middleware middleware;
 
     /**
@@ -50,7 +50,11 @@ public class Server {
         users.put(email, password);
     }
 
-    public static boolean hasEmail(String email) {
+    public boolean hasEmail(String email) {
         return users.containsKey(email);
+    }
+
+    public boolean isValidPassword(String email, String password) {
+        return users.get(email).equals(password);
     }
 }
