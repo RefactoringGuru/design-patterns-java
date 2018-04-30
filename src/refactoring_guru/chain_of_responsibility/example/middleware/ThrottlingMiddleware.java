@@ -2,7 +2,7 @@ package refactoring_guru.chain_of_responsibility.example.middleware;
 
 /**
  * EN: ConcreteHandler. Checks whether there are too many failed login requests.
- *
+ * 
  * RU: Конкретный элемент цепи обрабатывает запрос по-своему.
  */
 public class ThrottlingMiddleware extends Middleware {
