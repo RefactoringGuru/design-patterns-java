@@ -7,7 +7,7 @@ import refactoring_guru.abstract_factory.example.factories.WindowsFactory;
 
 /**
  * EN: Demo class. Everything comes together here.
- * 
+ *
  * RU: Демо-класс. Здесь всё сводится воедино.
  */
 public class Demo {
@@ -16,7 +16,7 @@ public class Demo {
      * EN: Application picks the factory type and creates it in run time
      * (usually at initialization stage), depending on the configuration or
      * environment variables.
-     * 
+     *
      * RU: Приложение выбирает тип и создаёт конкретные фабрики динамически
      * исходя из конфигурации или окружения.
      */

@@ -4,7 +4,7 @@ import refactoring_guru.mediator.example.mediator.Mediator;
 
 /**
  * EN: Common component interface.
- * 
+ *
  * RU: Общий интерфейс компонентов.
  */
 public interface Component {

@@ -12,7 +12,7 @@ import refactoring_guru.builder.example.components.*;
  * EN: Director defines the order of building steps. It works with a builder
  * object through common Builder interface. Therefore it may not know what
  * product is being built.
- * 
+ *
  * RU: Директор знает в какой последовательности заставлять работать строителя.
  * Он работает с ним через общий интерфейс Строителя. Из-за этого, он может не
  * знать какой конкретно продукт сейчас строится.

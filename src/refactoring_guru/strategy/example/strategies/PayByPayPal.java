@@ -5,7 +5,7 @@ import java.util.*;
 
 /**
  * EN: Concrete strategy. Implements PayPal payment method.
- * 
+ *
  * RU: Конкретная стратегия. Реализует оплату корзины интернет магазина через
  * платежную систему PayPal.
  */
@@ -23,7 +23,7 @@ public class PayByPayPal implements PayStrategy {
 
     /**
      * EN: Collect customer's data.
-     * 
+     *
      * RU: Собираем данные от клиента.
      */
     @Override
@@ -52,7 +52,7 @@ public class PayByPayPal implements PayStrategy {
 
     /**
      * EN: Save customer data for future shopping attempts.
-     * 
+     *
      * RU: Если клиент уже вошел в систему, то для следующей оплаты данные
      * вводить не придется.
      */

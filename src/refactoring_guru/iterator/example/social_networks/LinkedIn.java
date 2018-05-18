@@ -22,7 +22,7 @@ public class LinkedIn implements SocialNetwork {
         // EN: Here would be a POST request to one of the LinkedIn API
         // endpoints. Instead, we emulates long network connection, which you
         // would expect in the real life...
-        // 
+        //
         // RU: Здесь бы был POST запрос к одному из адресов API LinkedIn. Но
         // вместо этого мы эмулируем долгое сетевое соединение, прямо как в
         // реальной жизни...
@@ -30,7 +30,7 @@ public class LinkedIn implements SocialNetwork {
         System.out.println("LinkedIn: Loading profile '" + profileEmail + "' over the network...");
 
         // EN: ...and return test data.
-        // 
+        //
         // RU: ...и возвращаем тестовые данные.
         return findContact(profileEmail);
     }
@@ -39,7 +39,7 @@ public class LinkedIn implements SocialNetwork {
         // EN: Here would be a POST request to one of the LinkedIn API
         // endpoints. Instead, we emulates long network connection, which you
         // would expect in the real life.
-        // 
+        //
         // RU: Здесь бы был POST запрос к одному из адресов API LinkedIn. Но
         // вместо этого мы эмулируем долгое сетевое соединение, прямо как в
         // реальной жизни...
@@ -47,7 +47,7 @@ public class LinkedIn implements SocialNetwork {
         System.out.println("LinkedIn: Loading '" + contactType + "' list of '" + profileEmail + "' over the network...");
 
         // EN: ...and return test data.
-        // 
+        //
         // RU: ...и возвращаем тестовые данные.
         Profile profile = findContact(profileEmail);
         if (profile != null) {

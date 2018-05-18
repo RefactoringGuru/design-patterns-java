@@ -4,7 +4,7 @@ import java.io.*;
 
 /**
  * EN: Concrete strategy. Implements credit card payment method.
- * 
+ *
  * RU: Конкретная стратегия. Реализует оплату корзины интернет магазина
  * кредитной картой клиента.
  */
@@ -14,7 +14,7 @@ public class PayByCreditCard implements PayStrategy {
 
     /**
      * EN: Collect credit card data.
-     * 
+     *
      * RU: Собираем данные карты клиента.
      */
     @Override
@@ -37,7 +37,7 @@ public class PayByCreditCard implements PayStrategy {
 
     /**
      * EN: After card validation we can charge customer's credit card.
-     * 
+     *
      * RU: После проверки карты мы можем совершить оплату. Если клиент
      * продолжает покупки, мы не запрашиваем карту заново.
      */

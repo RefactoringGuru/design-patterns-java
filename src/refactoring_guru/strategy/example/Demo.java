@@ -10,7 +10,7 @@ import java.util.*;
 
 /**
  * EN: World first console e-commerce application.
- * 
+ *
  * RU: Первый в мире консольный интерет магазин.
  */
 public class Demo {
@@ -54,7 +54,7 @@ public class Demo {
 
                 // EN: Client creates different strategies based on input from
                 // user, application configuration, etc.
-                // 
+                //
                 // RU: Клиент создаёт различные стратегии на основании
                 // пользовательских данных, конфигурации и прочих параметров.
                 if (paymentMethod.equals("1")) {
@@ -66,10 +66,10 @@ public class Demo {
                 // EN: Order object delegates gathering payment data to strategy
                 // object, since only strategies know what data they need to
                 // process a payment.
-                // 
+                //
                 // RU: Объект заказа делегирует сбор платёжных данны стратегии,
-                // т.к. только стратегии знают какие данные им нужны для
-                // приёма оплаты.
+                // т.к. только стратегии знают какие данные им нужны для приёма
+                // оплаты.
                 order.processOrder(strategy);
             }
 
@@ -77,7 +77,7 @@ public class Demo {
             String proceed = reader.readLine();
             if (proceed.equalsIgnoreCase("P")) {
                 // EN: Finally, strategy handles the payment.
-                // 
+                //
                 // RU: И наконец, стратегия запускает приём платежа.
                 if (strategy.pay(Order.getTotalCost())) {
                     System.out.println("Payment has succeeded");

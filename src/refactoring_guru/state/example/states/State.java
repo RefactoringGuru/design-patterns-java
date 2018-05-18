@@ -4,7 +4,7 @@ import refactoring_guru.state.example.ui.Player;
 
 /**
  * EN: Common interface for all states.
- * 
+ *
  * RU: Общий интерфейс всех состояний.
  */
 public abstract class State {
@@ -13,7 +13,7 @@ public abstract class State {
     /**
      * EN: Context passes itself through the state constructor. This may help a
      * state to fetch some useful context data if needed.
-     * 
+     *
      * RU: Контекст передаёт себя в конструктор состояния, чтобы состояние могло
      * обращаться к его данным и методам в будущем, если потребуется.
      */

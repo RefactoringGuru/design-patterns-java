@@ -22,7 +22,7 @@ public class Facebook implements SocialNetwork {
         // EN: Here would be a POST request to one of the Facebook API
         // endpoints. Instead, we emulates long network connection, which you
         // would expect in the real life...
-        // 
+        //
         // RU: Здесь бы был POST запрос к одному из адресов API Facebook. Но
         // вместо этого мы эмулируем долгое сетевое соединение, прямо как в
         // реальной жизни...
@@ -30,7 +30,7 @@ public class Facebook implements SocialNetwork {
         System.out.println("Facebook: Loading profile '" + profileEmail + "' over the network...");
 
         // EN: ...and return test data.
-        // 
+        //
         // RU: ...и возвращаем тестовые данные.
         return findProfile(profileEmail);
     }
@@ -39,7 +39,7 @@ public class Facebook implements SocialNetwork {
         // EN: Here would be a POST request to one of the Facebook API
         // endpoints. Instead, we emulates long network connection, which you
         // would expect in the real life...
-        // 
+        //
         // RU: Здесь бы был POST запрос к одному из адресов API Facebook. Но
         // вместо этого мы эмулируем долгое сетевое соединение, прямо как в
         // реальной жизни...
@@ -47,7 +47,7 @@ public class Facebook implements SocialNetwork {
         System.out.println("Facebook: Loading '" + contactType + "' list of '" + profileEmail + "' over the network...");
 
         // EN: ...and return test data.
-        // 
+        //
         // RU: ...и возвращаем тестовые данные.
         Profile profile = findProfile(profileEmail);
         if (profile != null) {

@@ -10,7 +10,7 @@ import java.util.ArrayList;
 /**
  * EN: Concrete components don't talk with each other. They have only one
  * communication channel–sending requests to the mediator.
- * 
+ *
  * RU: Конкретные компоненты никак не связаны между собой. У них есть только
  * один канал общения – через отправку уведомлений посреднику.
  */

@@ -8,7 +8,7 @@ import java.io.*;
 
 /**
  * EN: Demo class. Everything comes together here.
- * 
+ *
  * RU: Демо-класс. Здесь всё сводится воедино.
  */
 public class Demo {
@@ -21,7 +21,7 @@ public class Demo {
         String password = reader.readLine();
 
         // EN: Enter the message.
-        // 
+        //
         // RU: Вводим сообщение.
         System.out.print("Input message: ");
         String message = reader.readLine();
@@ -32,7 +32,7 @@ public class Demo {
         int choice = Integer.parseInt(reader.readLine());
 
         // EN: Create proper network object and send the message.
-        // 
+        //
         // RU: Создаем сетевые объекты и публикуем пост.
         if (choice == 1) {
             network = new Facebook(userName, password);

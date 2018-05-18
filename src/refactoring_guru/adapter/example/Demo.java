@@ -7,13 +7,13 @@ import refactoring_guru.adapter.example.round.RoundHole;
 
 /**
  * EN: Somewhere in client code...
- * 
+ *
  * RU: Где-то в клиентском коде...
  */
 public class Demo {
     public static void main(String[] args) {
         // EN: Round fits round, no surprise.
-        // 
+        //
         // RU: Круглое к круглому — всё работает.
         RoundHole hole = new RoundHole(5);
         RoundPeg rpeg = new RoundPeg(5);
@@ -24,11 +24,11 @@ public class Demo {
         SquarePeg smallSqPeg = new SquarePeg(2);
         SquarePeg largeSqPeg = new SquarePeg(20);
         // EN: hole.fits(smallSqPeg); // Won't compile.
-        // 
+        //
         // RU: hole.fits(smallSqPeg); // Не скомпилируется.
 
         // EN: Adapter solves the problem.
-        // 
+        //
         // RU: Адаптер решит проблему.
         SquarePegAdapter smallSqPegAdapter = new SquarePegAdapter(smallSqPeg);
         SquarePegAdapter largeSqPegAdapter = new SquarePegAdapter(largeSqPeg);

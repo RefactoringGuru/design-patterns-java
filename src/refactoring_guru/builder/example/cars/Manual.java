@@ -9,7 +9,7 @@ import refactoring_guru.builder.example.components.*;
 /**
  * EN: Car manual is another product. Note that it does not have the same
  * ancestor as a Car. They are not related.
- * 
+ *
  * RU: Руководство автомобиля — это второй продукт. Заметьте, что руководство и
  * сам автомобиль не имеют общего родительского класса. По сути, они независимы.
  */

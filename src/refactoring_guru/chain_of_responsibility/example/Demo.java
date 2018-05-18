@@ -10,7 +10,7 @@ import java.io.*;
 
 /**
  * EN: Demo class. Everything comes together here.
- * 
+ *
  * RU: Демо-класс. Здесь всё сводится воедино.
  */
 public class Demo {
@@ -24,7 +24,7 @@ public class Demo {
 
         // EN: All checks are linked. Client can build various chains using the
         // same components.
-        // 
+        //
         // RU: Проверки связаны в одну цепь. Клиент может строить различные
         // цепи, используя одни и те же компоненты.
         Middleware middleware = new ThrottlingMiddleware(2);
@@ -32,7 +32,7 @@ public class Demo {
                 .linkWith(new RoleCheckMiddleware());
 
         // EN: Server gets a chain from client code.
-        // 
+        //
         // RU: Сервер получает цепочку от клиентского кода.
         server.setMiddleware(middleware);
     }

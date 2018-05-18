@@ -24,7 +24,7 @@ public class UI {
         // EN: Context delegates handling user's input to a state object.
         // Naturally, the outcome will depend on what state is currently active,
         // since all states can handle the input differently.
-        // 
+        //
         // RU: Контекст заставляет состояние реагировать на пользовательский
         // ввод вместо себя. Реакция может быть разной в зависимости от того,
         // какое состояние сейчас активно.

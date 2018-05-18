@@ -8,7 +8,7 @@ import refactoring_guru.abstract_factory.example.checkboxes.MacOSCheckbox;
 /**
  * EN: Each concrete factory extends basic factory and responsible for creating
  * products of a single variety.
- * 
+ *
  * RU: Каждая конкретная фабрика знает и создаёт только продукты своей вариации.
  */
 public class MacOSFactory implements GUIFactory {

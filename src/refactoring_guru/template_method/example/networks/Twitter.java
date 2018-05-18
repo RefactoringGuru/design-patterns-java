@@ -2,7 +2,7 @@ package refactoring_guru.template_method.example.networks;
 
 /**
  * EN: Class of social network
- * 
+ *
  * RU: Класс социальной сети.
  */
 public class Twitter extends Network {

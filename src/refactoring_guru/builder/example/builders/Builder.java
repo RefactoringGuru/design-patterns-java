@@ -9,9 +9,9 @@ import refactoring_guru.builder.example.components.*;
 
 /**
  * EN: Builder interface defines all possible ways to configure a product.
- * 
- * RU: Интерфейс Строителя объявляет все возможные этапы и шаги
- * конфигурации продукта.
+ *
+ * RU: Интерфейс Строителя объявляет все возможные этапы и шаги конфигурации
+ * продукта.
  */
 public interface Builder {
     public void setType(Type type);

@@ -8,7 +8,7 @@ import refactoring_guru.builder.example.components.*;
 
 /**
  * EN: Car is a product class.
- * 
+ *
  * RU: Автомобиль — это класс продукта.
  */
 public class Car {
