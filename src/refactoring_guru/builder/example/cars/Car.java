@@ -18,7 +18,7 @@ public class Car {
     private final Transmission transmission;
     private final TripComputer tripComputer;
     private final GPSNavigator gpsNavigator;
-    private static double fuel = 0;
+    private double fuel = 0;
 
     public Car(Type type, int seats, Engine engine, Transmission transmission,
                TripComputer tripComputer, GPSNavigator gpsNavigator) {
@@ -58,7 +58,7 @@ public class Car {
         return gpsNavigator;
     }
 
-    public static double getFuel() {
+    public double getFuel() {
         return fuel;
     }
 }

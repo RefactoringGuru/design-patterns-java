@@ -37,8 +37,18 @@ public class Manual {
         info.append("Count of seats: " + seats + "\n");
         info.append("Engine: volume - " + engine.getVolume() + "; mileage - " + engine.getMileage() + "\n");
         info.append("Transmission: " + transmission + "\n");
-        info.append("Trip Computer: Trip Computer" + "\n");
-        info.append("GPS Navigator: GPS Navigator" + "\n");
+        if (this.tripComputer != null) {
+            info.append("Trip Computer: Functional" + "\n");
+        }
+        else {
+            info.append("Trip Computer: N/A" + "\n");
+        }
+        if (this.gpsNavigator != null) {
+            info.append("GPS Navigator: Functional" + "\n");
+        }
+        else {
+            info.append("GPS Navigator: N/A" + "\n");
+        }
         return info.toString();
     }
 }
