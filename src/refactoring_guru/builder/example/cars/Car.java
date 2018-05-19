@@ -27,6 +27,7 @@ public class Car {
         this.engine = engine;
         this.transmission = transmission;
         this.tripComputer = tripComputer;
+        this.tripComputer.setCar(this);
         this.gpsNavigator = gpsNavigator;
     }
 
