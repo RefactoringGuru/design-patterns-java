@@ -31,12 +31,16 @@ public class Car {
         this.gpsNavigator = gpsNavigator;
     }
 
-    public void setFuel(double fuel) {
-        this.fuel = fuel;
-    }
-
     public Type getType() {
         return type;
+    }
+
+    public double getFuel() {
+        return fuel;
+    }
+
+    public void setFuel(double fuel) {
+        this.fuel = fuel;
     }
 
     public int getSeats() {
@@ -57,9 +61,5 @@ public class Car {
 
     public GPSNavigator getGpsNavigator() {
         return gpsNavigator;
-    }
-
-    public double getFuel() {
-        return fuel;
     }
 }

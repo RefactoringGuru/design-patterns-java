@@ -8,7 +8,7 @@ package refactoring_guru.builder.example.components;
 public class Engine {
     private final double volume;
     private double mileage;
-    private static boolean started;
+    private boolean started;
 
     public Engine(double volume, double mileage) {
         this.volume = volume;
@@ -16,14 +16,14 @@ public class Engine {
     }
 
     public void on() {
-        this.started = true;
+        started = true;
     }
 
     public void of() {
-        this.started = false;
+        started = false;
     }
 
-    public static boolean isStarted() {
+    public boolean isStarted() {
         return started;
     }
 

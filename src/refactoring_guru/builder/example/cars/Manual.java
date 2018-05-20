@@ -22,7 +22,7 @@ public class Manual {
     private final GPSNavigator gpsNavigator;
 
     public Manual(Type type, int seats, Engine engine, Transmission transmission,
-               TripComputer tripComputer, GPSNavigator gpsNavigator) {
+                  TripComputer tripComputer, GPSNavigator gpsNavigator) {
         this.type = type;
         this.seats = seats;
         this.engine = engine;
@@ -32,23 +32,21 @@ public class Manual {
     }
 
     public String print() {
-        StringBuilder info = new StringBuilder();
-        info.append("Type of car: " + type + "\n");
-        info.append("Count of seats: " + seats + "\n");
-        info.append("Engine: volume - " + engine.getVolume() + "; mileage - " + engine.getMileage() + "\n");
-        info.append("Transmission: " + transmission + "\n");
+        String info = "";
+        info += "Type of car: " + type + "\n";
+        info += "Count of seats: " + seats + "\n";
+        info += "Engine: volume - " + engine.getVolume() + "; mileage - " + engine.getMileage() + "\n";
+        info += "Transmission: " + transmission + "\n";
         if (this.tripComputer != null) {
-            info.append("Trip Computer: Functional" + "\n");
-        }
-        else {
-            info.append("Trip Computer: N/A" + "\n");
+            info += "Trip Computer: Functional" + "\n";
+        } else {
+            info += "Trip Computer: N/A" + "\n";
         }
         if (this.gpsNavigator != null) {
-            info.append("GPS Navigator: Functional" + "\n");
+            info += "GPS Navigator: Functional" + "\n";
+        } else {
+            info += "GPS Navigator: N/A" + "\n";
         }
-        else {
-            info.append("GPS Navigator: N/A" + "\n");
-        }
-        return info.toString();
+        return info;
     }
 }
