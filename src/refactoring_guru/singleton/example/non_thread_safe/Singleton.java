@@ -9,7 +9,7 @@ public final class Singleton {
         //
         // RU: Этот код эмулирует медленную инициализацию.
         try {
-            Thread.currentThread().sleep(1000);
+            Thread.sleep(1000);
         } catch (InterruptedException ex) {
             ex.printStackTrace();
         }

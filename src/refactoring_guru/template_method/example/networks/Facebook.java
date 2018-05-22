@@ -43,7 +43,7 @@ public class Facebook extends Network {
             System.out.println();
             while (i < 10) {
                 System.out.print(".");
-                Thread.currentThread().sleep(500);
+                Thread.sleep(500);
                 i++;
             }
         } catch (InterruptedException ex) {

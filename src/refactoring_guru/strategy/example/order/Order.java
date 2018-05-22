@@ -12,7 +12,7 @@ import refactoring_guru.strategy.example.strategies.PayStrategy;
  * делает сама.
  */
 public class Order {
-    private static int totalCost = 0;
+    private int totalCost = 0;
     private boolean isClosed = false;
 
     public void processOrder(PayStrategy strategy) {
@@ -27,7 +27,7 @@ public class Order {
         this.totalCost += cost;
     }
 
-    public static int getTotalCost() {
+    public int getTotalCost() {
         return totalCost;
     }
 

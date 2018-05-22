@@ -73,13 +73,13 @@ public class Demo {
                 order.processOrder(strategy);
             }
 
-            System.out.print("Pay " + Order.getTotalCost() + " units or Continue shopping?  P/C: ");
+            System.out.print("Pay " + order.getTotalCost() + " units or Continue shopping?  P/C: ");
             String proceed = reader.readLine();
             if (proceed.equalsIgnoreCase("P")) {
                 // EN: Finally, strategy handles the payment.
                 //
                 // RU: И наконец, стратегия запускает приём платежа.
-                if (strategy.pay(Order.getTotalCost())) {
+                if (strategy.pay(order.getTotalCost())) {
                     System.out.println("Payment has succeeded");
                 } else {
                     System.out.println("FAIL! Check your data");
