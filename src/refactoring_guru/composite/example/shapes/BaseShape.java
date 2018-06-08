@@ -6,7 +6,7 @@ abstract class BaseShape implements Shape {
     public int x;
     public int y;
     public Color color;
-    private Boolean selected = false;
+    private boolean selected = false;
 
     BaseShape(int x, int y, Color color) {
         this.x = x;
@@ -41,7 +41,7 @@ abstract class BaseShape implements Shape {
     }
 
     @Override
-    public Boolean isInsideBounds(int x, int y) {
+    public boolean isInsideBounds(int x, int y) {
         return x > getX() && x < (getX() + getWidth()) &&
                 y > getY() && y < (getY() + getHeight());
     }
