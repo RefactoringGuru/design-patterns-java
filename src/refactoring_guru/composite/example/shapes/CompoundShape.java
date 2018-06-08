@@ -98,7 +98,7 @@ public class CompoundShape extends BaseShape {
     }
 
     @Override
-    public Boolean isInsideBounds(int x, int y) {
+    public boolean isInsideBounds(int x, int y) {
         for (Shape child : children) {
             if (child.isInsideBounds(x, y)) {
                 return true;
@@ -115,7 +115,7 @@ public class CompoundShape extends BaseShape {
         }
     }
 
-    public Boolean selectChildAt(int x, int y) {
+    public boolean selectChildAt(int x, int y) {
         for (Shape child : children) {
             if (child.isInsideBounds(x, y)) {
                 child.select();
