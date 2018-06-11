@@ -9,7 +9,7 @@ public class CopyCommand extends Command {
     }
 
     @Override
-    public Boolean execute() {
+    public boolean execute() {
         editor.clipboard = editor.textField.getSelectedText();
         return false;
     }

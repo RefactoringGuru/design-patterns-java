@@ -4,13 +4,13 @@ import refactoring_guru.command.example.editor.Editor;
 
 public abstract class Command {
     public Editor editor;
-    protected String backup;
+    private String backup;
 
-    public Command(Editor editor) {
+    Command(Editor editor) {
         this.editor = editor;
     }
 
-    protected void backup() {
+    void backup() {
         backup = editor.textField.getText();
     }
 
@@ -18,5 +18,5 @@ public abstract class Command {
         editor.textField.setText(backup);
     }
 
-    public abstract Boolean execute();
+    public abstract boolean execute();
 }

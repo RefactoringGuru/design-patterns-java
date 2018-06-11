@@ -11,13 +11,13 @@ import java.awt.event.ActionListener;
 public class Editor {
     public JTextArea textField;
     public String clipboard;
-    public CommandHistory history = new CommandHistory();
+    private CommandHistory history = new CommandHistory();
 
     public void init() {
         JFrame frame = new JFrame("Text editor (type & use buttons, Luke!)");
         JPanel content = new JPanel();
         frame.setContentPane(content);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         content.setLayout(new BoxLayout(content, BoxLayout.Y_AXIS));
         textField = new JTextArea();
         textField.setLineWrap(true);
@@ -62,13 +62,13 @@ public class Editor {
         frame.setVisible(true);
     }
 
-    public void executeCommand(Command command) {
+    private void executeCommand(Command command) {
         if (command.execute()) {
             history.push(command);
         }
     }
 
-    public void undo() {
+    private void undo() {
         if (history.isEmpty()) return;
 
         Command command = history.pop();

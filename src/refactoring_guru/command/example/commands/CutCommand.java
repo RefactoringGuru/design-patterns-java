@@ -9,7 +9,7 @@ public class CutCommand extends Command {
     }
 
     @Override
-    public Boolean execute() {
+    public boolean execute() {
         if (editor.textField.getSelectedText().isEmpty()) return false;
 
         backup();
@@ -19,7 +19,7 @@ public class CutCommand extends Command {
         return true;
     }
 
-    public String cutString(String source, String cut) {
+    private String cutString(String source) {
         String start = source.substring(0, editor.textField.getSelectionStart());
         String end = source.substring(editor.textField.getSelectionEnd(), source.length());
         return start + end;
