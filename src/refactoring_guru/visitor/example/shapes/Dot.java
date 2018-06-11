@@ -3,9 +3,9 @@ package refactoring_guru.visitor.example.shapes;
 import refactoring_guru.visitor.example.visitor.Visitor;
 
 public class Dot implements Shape {
-    public int id;
-    public int x;
-    public int y;
+    private int id;
+    private int x;
+    private int y;
 
     public Dot() {
     }

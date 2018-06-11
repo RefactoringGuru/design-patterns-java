@@ -3,12 +3,10 @@ package refactoring_guru.visitor.example.shapes;
 import refactoring_guru.visitor.example.visitor.Visitor;
 
 public class Circle extends Dot {
-    public int radius;
+    private int radius;
 
     public Circle(int id, int x, int y, int radius) {
-        this.id = id;
-        this.x = x;
-        this.y = y;
+        super(id, x, y);
         this.radius = radius;
     }
 
