@@ -8,7 +8,7 @@ import refactoring_guru.state.example.ui.Player;
  * RU: Общий интерфейс всех состояний.
  */
 public abstract class State {
-    public Player player;
+    Player player;
 
     /**
      * EN: Context passes itself through the state constructor. This may help a
@@ -17,7 +17,7 @@ public abstract class State {
      * RU: Контекст передаёт себя в конструктор состояния, чтобы состояние могло
      * обращаться к его данным и методам в будущем, если потребуется.
      */
-    public State(Player player) {
+    State(Player player) {
         this.player = player;
     }
 

@@ -4,7 +4,7 @@ import refactoring_guru.state.example.ui.Player;
 
 public class PlayingState extends State {
 
-    public PlayingState(Player player) {
+    PlayingState(Player player) {
         super(player);
     }
 
