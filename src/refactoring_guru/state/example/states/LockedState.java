@@ -10,7 +10,7 @@ import refactoring_guru.state.example.ui.Player;
  */
 public class LockedState extends State {
 
-    public LockedState(Player player) {
+    LockedState(Player player) {
         super(player);
         player.setPlaying(false);
     }
