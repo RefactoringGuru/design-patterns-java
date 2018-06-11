@@ -3,11 +3,11 @@ package refactoring_guru.visitor.example.shapes;
 import refactoring_guru.visitor.example.visitor.Visitor;
 
 public class Rectangle implements Shape {
-    public int id;
-    public int x;
-    public int y;
-    public int width;
-    public int height;
+    private int id;
+    private int x;
+    private int y;
+    private int width;
+    private int height;
 
     public Rectangle(int id, int x, int y, int width, int height) {
         this.id = id;

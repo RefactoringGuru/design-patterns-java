@@ -8,9 +8,9 @@ public interface Shape {
     public int getWidth();
     public int getHeight();
     public void move(int x, int y);
-    public Boolean isInsideBounds(int x, int y);
+    public boolean isInsideBounds(int x, int y);
     public void select();
     public void unSelect();
-    public Boolean isSelected();
+    public boolean isSelected();
     public void paint(Graphics graphics);
 }
