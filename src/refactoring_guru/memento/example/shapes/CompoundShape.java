@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class CompoundShape extends BaseShape {
-    protected List<Shape> children = new ArrayList<>();
+    private List<Shape> children = new ArrayList<>();
 
     public CompoundShape(Shape... components) {
         super(0, 0, Color.BLACK);
@@ -119,7 +119,7 @@ public class CompoundShape extends BaseShape {
     }
 
     @Override
-    public Boolean isInsideBounds(int x, int y) {
+    public boolean isInsideBounds(int x, int y) {
         for (Shape child : children) {
             if (child.isInsideBounds(x, y)) {
                 return true;
@@ -153,7 +153,7 @@ public class CompoundShape extends BaseShape {
         return null;
     }
 
-    public Boolean selectChildAt(int x, int y) {
+    public boolean selectChildAt(int x, int y) {
         Shape child = getChildAt(x,y);
         if (child != null) {
             child.select();

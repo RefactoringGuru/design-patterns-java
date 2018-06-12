@@ -3,10 +3,10 @@ package refactoring_guru.memento.example.shapes;
 import java.awt.*;
 
 public abstract class BaseShape implements Shape {
-    protected int x, y;
+    int x, y;
     private int dx = 0, dy = 0;
-    protected Color color;
-    protected Boolean selected = false;
+    private Color color;
+    private boolean selected = false;
 
     BaseShape(int x, int y, Color color) {
         this.x = x;
@@ -59,7 +59,7 @@ public abstract class BaseShape implements Shape {
     }
 
     @Override
-    public Boolean isInsideBounds(int x, int y) {
+    public boolean isInsideBounds(int x, int y) {
         return x > getX() && x < (getX() + getWidth()) &&
                 y > getY() && y < (getY() + getHeight());
     }
@@ -85,7 +85,7 @@ public abstract class BaseShape implements Shape {
     }
 
     @Override
-    public Boolean isSelected() {
+    public boolean isSelected() {
         return selected;
     }
 
@@ -93,7 +93,6 @@ public abstract class BaseShape implements Shape {
         graphics.setColor(Color.LIGHT_GRAY);
 
         Graphics2D g2 = (Graphics2D) graphics;
-        Stroke backup = g2.getStroke();
         float dash1[] = {2.0f};
         g2.setStroke(new BasicStroke(1.0f,
                 BasicStroke.CAP_BUTT,
