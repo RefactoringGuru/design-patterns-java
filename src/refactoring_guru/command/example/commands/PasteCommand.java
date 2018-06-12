@@ -9,11 +9,11 @@ public class PasteCommand extends Command {
     }
 
     @Override
-    public Boolean execute() {
-        if (editor.clipboard.isEmpty()) return false;
+    public boolean execute() {
+        if (editor.clipboard == null || editor.clipboard.isEmpty()) return false;
 
         backup();
-        editor.textField.append(editor.clipboard);
+        editor.textField.insert(editor.clipboard, editor.textField.getCaretPosition());
         return true;
     }
 }
