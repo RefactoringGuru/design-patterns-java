@@ -17,11 +17,11 @@ public class History {
             memento = m;
         }
 
-        public Command getCommand() {
+        private Command getCommand() {
             return command;
         }
 
-        public Memento getMemento() {
+        private Memento getMemento() {
             return memento;
         }
     }
@@ -55,7 +55,7 @@ public class History {
         return true;
     }
 
-    public Pair getUndo() {
+    private Pair getUndo() {
         if (virtualSize == 0) {
             return null;
         }
@@ -63,7 +63,7 @@ public class History {
         return history.get(virtualSize);
     }
 
-    public Pair getRedo() {
+    private Pair getRedo() {
         if (virtualSize == history.size()) {
             return null;
         }

@@ -67,7 +67,7 @@ class Canvas extends java.awt.Canvas {
                 if (e.getButton() != MouseEvent.BUTTON3) {
                     return;
                 }
-                refactoring_guru.memento.example.shapes.Shape target = editor.getShapes().getChildAt(e.getX(), e.getY());
+                Shape target = editor.getShapes().getChildAt(e.getX(), e.getY());
                 if (target != null) {
                     editor.execute(new ColorCommand(editor, new Color((int) (Math.random() * 0x1000000))));
                     repaint();
