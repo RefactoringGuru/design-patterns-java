@@ -42,7 +42,7 @@ public class Demo {
                 System.out.print("Count: ");
                 int count = Integer.parseInt(reader.readLine());
                 order.setTotalCost(cost * count);
-                System.out.print("You wish to continue selection? Y/N: ");
+                System.out.print("Do you wish to continue selection? Y/N: ");
                 continueChoice = reader.readLine();
             } while (continueChoice.equalsIgnoreCase("Y"));
 
@@ -59,7 +59,7 @@ public class Demo {
                 // пользовательских данных, конфигурации и прочих параметров.
                 if (paymentMethod.equals("1")) {
                     strategy = new PayByPayPal();
-                } else if (paymentMethod.equals("2")) {
+                } else {
                     strategy = new PayByCreditCard();
                 }
 
@@ -71,20 +71,20 @@ public class Demo {
                 // т.к. только стратегии знают какие данные им нужны для приёма
                 // оплаты.
                 order.processOrder(strategy);
-            }
 
-            System.out.print("Pay " + order.getTotalCost() + " units or Continue shopping?  P/C: ");
-            String proceed = reader.readLine();
-            if (proceed.equalsIgnoreCase("P")) {
-                // EN: Finally, strategy handles the payment.
-                //
-                // RU: И наконец, стратегия запускает приём платежа.
-                if (strategy.pay(order.getTotalCost())) {
-                    System.out.println("Payment has succeeded");
-                } else {
-                    System.out.println("FAIL! Check your data");
+                System.out.print("Pay " + order.getTotalCost() + " units or Continue shopping?  P/C: ");
+                String proceed = reader.readLine();
+                if (proceed.equalsIgnoreCase("P")) {
+                    // EN: Finally, strategy handles the payment.
+                    //
+                    // RU: И наконец, стратегия запускает приём платежа.
+                    if (strategy.pay(order.getTotalCost())) {
+                        System.out.println("Payment has succeeded");
+                    } else {
+                        System.out.println("FAIL! Check your data");
+                    }
+                    order.setClosed();
                 }
-                order.setClosed();
             }
         }
     }

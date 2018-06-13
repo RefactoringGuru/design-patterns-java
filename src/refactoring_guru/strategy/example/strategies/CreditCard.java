@@ -11,7 +11,7 @@ public class CreditCard {
     private String date;
     private String cvv;
 
-    public CreditCard(String number, String date, String cvv) {
+    CreditCard(String number, String date, String cvv) {
         this.amount = 100_000;
         this.number = number;
         this.date = date;
