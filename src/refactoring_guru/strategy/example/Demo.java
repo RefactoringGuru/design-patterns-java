@@ -14,8 +14,8 @@ import java.util.*;
  * RU: Первый в мире консольный интерет магазин.
  */
 public class Demo {
-    public static Map<Integer, Integer> priceOnProducts = new HashMap<>();
-    public static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+    private static Map<Integer, Integer> priceOnProducts = new HashMap<>();
+    private static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
     private static Order order = new Order();
     private static PayStrategy strategy;
 
