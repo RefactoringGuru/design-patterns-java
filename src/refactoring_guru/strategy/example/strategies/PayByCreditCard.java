@@ -20,11 +20,11 @@ public class PayByCreditCard implements PayStrategy {
     @Override
     public void collectPaymentDetails() {
         try {
-            System.out.print("Enter card number: ");
+            System.out.print("Enter the card number: ");
             String number = READER.readLine();
-            System.out.print("Enter date 'mm/yy': ");
+            System.out.print("Enter the card expiration date 'mm/yy': ");
             String date = READER.readLine();
-            System.out.print("Enter cvv code: ");
+            System.out.print("Enter the CVV code: ");
             String cvv = READER.readLine();
             card = new CreditCard(number, date, cvv);
 
@@ -44,7 +44,7 @@ public class PayByCreditCard implements PayStrategy {
     @Override
     public boolean pay(int paymentAmount) {
         if (cardIsPresent()) {
-            System.out.println("Paying " + paymentAmount + " using Credit Card");
+            System.out.println("Paying " + paymentAmount + " using Credit Card.");
             card.setAmount(card.getAmount() - paymentAmount);
             return true;
         } else {
