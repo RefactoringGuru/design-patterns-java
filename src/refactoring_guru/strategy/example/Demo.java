@@ -32,7 +32,7 @@ public class Demo {
 
             String continueChoice;
             do {
-                System.out.print("Select a product:" + "\n" +
+                System.out.print("Please, select a product:" + "\n" +
                         "1 - Mother board" + "\n" +
                         "2 - CPU" + "\n" +
                         "3 - HDD" + "\n" +
@@ -42,12 +42,12 @@ public class Demo {
                 System.out.print("Count: ");
                 int count = Integer.parseInt(reader.readLine());
                 order.setTotalCost(cost * count);
-                System.out.print("Do you wish to continue selection? Y/N: ");
+                System.out.print("Do you wish to continue selecting products? Y/N: ");
                 continueChoice = reader.readLine();
             } while (continueChoice.equalsIgnoreCase("Y"));
 
             if (strategy == null) {
-                System.out.println("Select a Payment Method" + "\n" +
+                System.out.println("Please, select a payment method:" + "\n" +
                         "1 - PalPay" + "\n" +
                         "2 - Credit Card");
                 String paymentMethod = reader.readLine();
@@ -72,16 +72,16 @@ public class Demo {
                 // оплаты.
                 order.processOrder(strategy);
 
-                System.out.print("Pay " + order.getTotalCost() + " units or Continue shopping?  P/C: ");
+                System.out.print("Pay " + order.getTotalCost() + " units or Continue shopping? P/C: ");
                 String proceed = reader.readLine();
                 if (proceed.equalsIgnoreCase("P")) {
                     // EN: Finally, strategy handles the payment.
                     //
                     // RU: И наконец, стратегия запускает приём платежа.
                     if (strategy.pay(order.getTotalCost())) {
-                        System.out.println("Payment has succeeded");
+                        System.out.println("Payment has been succeesfull.");
                     } else {
-                        System.out.println("FAIL! Check your data");
+                        System.out.println("FAIL! Please, check your data.");
                     }
                     order.setClosed();
                 }
