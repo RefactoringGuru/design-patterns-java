@@ -23,7 +23,7 @@ Enter password: qwerty
 Wrong email or password!
 Enter user email: amanda@ya.com
 Enter password: amanda1985
-Data verification was successful
+Data verification has been successful
 Pay 6250 units or Continue shopping?  P/C: p
 Paying 6250 using PayPal
-Payment has succeeded
+Payment has been succeeded
