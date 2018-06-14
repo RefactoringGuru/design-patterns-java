@@ -6,10 +6,10 @@ package refactoring_guru.template_method.example.networks;
  * RU: Базовый класс социальной сети.
  */
 public abstract class Network {
-    protected String userName;
-    protected String password;
+    String userName;
+    String password;
 
-    public Network() {}
+    Network() {}
 
     /**
      * EN: Publish the data to whatever network.

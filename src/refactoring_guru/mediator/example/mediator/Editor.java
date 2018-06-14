@@ -22,7 +22,7 @@ public class Editor implements Mediator {
     private AddButton add;
     private DeleteButton del;
     private SaveButton save;
-    private refactoring_guru.mediator.example.components.List list;
+    private List list;
     private Filter filter;
 
     private JLabel titleLabel = new JLabel("Title:");
@@ -35,7 +35,7 @@ public class Editor implements Mediator {
      * RU: Здесь происходит регистрация компонентов посредником.
      */
     @Override
-    public void registerComponent(refactoring_guru.mediator.example.components.Component component) {
+    public void registerComponent(Component component) {
         component.setMediator(this);
         switch (component.getName()) {
             case "AddButton":
@@ -48,7 +48,7 @@ public class Editor implements Mediator {
                 filter = (Filter)component;
                 break;
             case "List":
-                list = (refactoring_guru.mediator.example.components.List)component;
+                list = (List)component;
                 this.list.addListSelectionListener(listSelectionEvent -> {
                     Note note = (Note)list.getSelectedValue();
                     if (note != null) {

@@ -59,7 +59,7 @@ public class List extends JList implements Component {
     private class Hide implements Runnable {
         private List list;
 
-        public Hide(List list) {
+        Hide(List list) {
             this.list = list;
         }
 
