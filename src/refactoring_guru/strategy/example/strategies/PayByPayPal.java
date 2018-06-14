@@ -30,12 +30,12 @@ public class PayByPayPal implements PayStrategy {
     public void collectPaymentDetails() {
         try {
             while (!signedIn) {
-                System.out.print("Enter user email: ");
+                System.out.print("Enter the user's email: ");
                 email = READER.readLine();
-                System.out.print("Enter password: ");
+                System.out.print("Enter the password: ");
                 password = READER.readLine();
                 if (verify()) {
-                    System.out.println("Data verification has succeeded");
+                    System.out.println("Data verification has been successfull.");
                 } else {
                     System.out.println("Wrong email or password!");
                 }
@@ -59,7 +59,7 @@ public class PayByPayPal implements PayStrategy {
     @Override
     public boolean pay(int paymentAmount) {
         if (signedIn) {
-            System.out.println("Paying " + paymentAmount + " using PayPal");
+            System.out.println("Paying " + paymentAmount + " using PayPal.");
             return true;
         } else {
             return false;
