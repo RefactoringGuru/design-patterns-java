@@ -16,7 +16,7 @@ public class Demo {
 
     }
 
-    public static long test(YoutubeDownloader downloader) {
+    private static long test(YoutubeDownloader downloader) {
         long startTime = System.currentTimeMillis();
 
         // User behavior in our app:

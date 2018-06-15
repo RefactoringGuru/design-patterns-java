@@ -26,4 +26,4 @@ Enter password: amanda1985
 Data verification has been successful.
 Pay 6250 units or Continue shopping?  P/C: p
 Paying 6250 using PayPal.
-Payment has been succeesfull.
+Payment has been successful.
