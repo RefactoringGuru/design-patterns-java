@@ -79,7 +79,7 @@ public class Demo {
                     //
                     // RU: И наконец, стратегия запускает приём платежа.
                     if (strategy.pay(order.getTotalCost())) {
-                        System.out.println("Payment has been succeesfull.");
+                        System.out.println("Payment has been succeesful.");
                     } else {
                         System.out.println("FAIL! Please, check your data.");
                     }
