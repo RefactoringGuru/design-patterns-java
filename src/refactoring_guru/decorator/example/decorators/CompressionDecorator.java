@@ -34,7 +34,7 @@ public class CompressionDecorator extends DataSourceDecorator {
         return decompress(super.readData());
     }
 
-    public String compress(String stringData) {
+    private String compress(String stringData) {
         byte[] data = stringData.getBytes();
         try {
             ByteArrayOutputStream bout = new ByteArrayOutputStream(512);
@@ -48,7 +48,7 @@ public class CompressionDecorator extends DataSourceDecorator {
         }
     }
 
-    public String decompress(String stringData) {
+    private String decompress(String stringData) {
         byte[] data = Base64.getDecoder().decode(stringData);
         try {
             InputStream in = new ByteArrayInputStream(data);
