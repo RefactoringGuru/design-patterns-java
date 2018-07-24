@@ -15,8 +15,9 @@ public class CutCommand extends Command {
         backup();
         String source = editor.textField.getText();
         editor.clipboard = editor.textField.getSelectedText();
-        editor.textField.setText(cutString(source, editor.clipboard));
+        editor.textField.setText(cutString(source));
         return true;
+    }
     }
 
     private String cutString(String source) {
