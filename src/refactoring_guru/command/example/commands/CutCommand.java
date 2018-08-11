@@ -18,7 +18,7 @@ public class CutCommand extends Command {
         editor.textField.setText(cutString(source));
         return true;
     }
-    }
+    
 
     private String cutString(String source) {
         String start = source.substring(0, editor.textField.getSelectionStart());
