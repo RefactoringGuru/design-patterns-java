@@ -28,12 +28,12 @@ public class Tv implements Device {
     @Override
     public void setVolume(int volume) {
         if (volume > 100) {
-            volume = 100;
+            this.volume = 100;
+        } else if (volume < 0) {
+            this.volume = 0;
+        } else {
+            this.volume = volume;
         }
-        else if (volume < 0) {
-            volume = 0;
-        }
-        this.volume = volume;
     }
 
     @Override
