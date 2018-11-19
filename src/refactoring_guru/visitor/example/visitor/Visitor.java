@@ -7,11 +7,11 @@ import refactoring_guru.visitor.example.shapes.Dot;
 import refactoring_guru.visitor.example.shapes.Rectangle;
 
 public interface Visitor {
-    public String visitDot(Dot dot);
+    String visitDot(Dot dot);
 
-    public String visitCircle(Circle circle);
+    String visitCircle(Circle circle);
 
-    public String visitRectangle(Rectangle rectangle);
+    String visitRectangle(Rectangle rectangle);
 
-    public String visitCompoundGraphic(CompoundShape cg);
+    String visitCompoundGraphic(CompoundShape cg);
 }

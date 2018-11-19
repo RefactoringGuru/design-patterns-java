@@ -1,13 +1,13 @@
 package refactoring_guru.bridge.example.remotes;
 
 public interface Remote {
-    public void power();
+    void power();
 
-    public void volumeDown();
+    void volumeDown();
 
-    public void volumeUp();
+    void volumeUp();
 
-    public void channelDown();
+    void channelDown();
 
-    public void channelUp();
+    void channelUp();
 }

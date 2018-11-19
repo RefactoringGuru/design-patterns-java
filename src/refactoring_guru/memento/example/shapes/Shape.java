@@ -4,20 +4,20 @@ import java.awt.*;
 import java.io.Serializable;
 
 public interface Shape extends Serializable {
-    public int getX();
-    public int getY();
-    public int getWidth();
-    public int getHeight();
-    public void drag();
-    public void drop();
-    public void moveTo(int x, int y);
-    public void moveBy(int x, int y);
-    public boolean isInsideBounds(int x, int y);
-    public Color getColor();
-    public void setColor(Color color);
-    public void select();
-    public void unSelect();
-    public boolean isSelected();
-    public void paint(Graphics graphics);
+    int getX();
+    int getY();
+    int getWidth();
+    int getHeight();
+    void drag();
+    void drop();
+    void moveTo(int x, int y);
+    void moveBy(int x, int y);
+    boolean isInsideBounds(int x, int y);
+    Color getColor();
+    void setColor(Color color);
+    void select();
+    void unSelect();
+    boolean isSelected();
+    void paint(Graphics graphics);
 }
 

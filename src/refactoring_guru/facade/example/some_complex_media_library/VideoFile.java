@@ -6,7 +6,7 @@ public class VideoFile {
 
     public VideoFile(String name) {
         this.name = name;
-        this.codecType = name.substring(name.indexOf(".") + 1, name.length());
+        this.codecType = name.substring(name.indexOf(".") + 1);
     }
 
     public String getCodecType() {

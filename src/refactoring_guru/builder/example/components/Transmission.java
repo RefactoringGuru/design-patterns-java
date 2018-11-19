@@ -6,5 +6,5 @@ package refactoring_guru.builder.example.components;
  * RU: Одна из фишек автомобиля.
  */
 public enum Transmission {
-    SINGLE_SPEED, MANUAL, AUTOMATIC, SEMI_AUTOMATIC;
+    SINGLE_SPEED, MANUAL, AUTOMATIC, SEMI_AUTOMATIC
 }

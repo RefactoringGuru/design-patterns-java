@@ -14,5 +14,5 @@ package refactoring_guru.abstract_factory.example.buttons;
  * Это — общий интерфейс для семейства продуктов кнопок.
  */
 public interface Button {
-    public abstract void paint();
+    void paint();
 }

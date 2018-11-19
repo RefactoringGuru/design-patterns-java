@@ -57,7 +57,7 @@ abstract class BaseShape implements Shape {
     }
 
     @Override
-    public Boolean isSelected() {
+    public boolean isSelected() {
         return selected;
     }
 

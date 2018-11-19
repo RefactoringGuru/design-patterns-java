@@ -22,8 +22,7 @@ public class CompoundShape extends BaseShape {
     }
 
     public void remove(Shape child) {
-        int i = children.indexOf(child);
-        children.remove(i);
+        children.remove(child);
     }
 
     public void remove(Shape... components) {

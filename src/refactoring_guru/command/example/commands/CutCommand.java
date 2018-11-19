@@ -21,7 +21,7 @@ public class CutCommand extends Command {
 
     private String cutString(String source) {
         String start = source.substring(0, editor.textField.getSelectionStart());
-        String end = source.substring(editor.textField.getSelectionEnd(), source.length());
+        String end = source.substring(editor.textField.getSelectionEnd());
         return start + end;
     }
 }

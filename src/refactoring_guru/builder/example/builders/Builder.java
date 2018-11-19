@@ -14,10 +14,10 @@ import refactoring_guru.builder.example.components.*;
  * продукта.
  */
 public interface Builder {
-    public void setType(Type type);
-    public void setSeats(int seats);
-    public void setEngine (Engine engine);
-    public void setTransmission(Transmission transmission);
-    public void setTripComputer(TripComputer tripComputer);
-    public void setGPSNavigator(GPSNavigator gpsNavigator);
+    void setType(Type type);
+    void setSeats(int seats);
+    void setEngine(Engine engine);
+    void setTransmission(Transmission transmission);
+    void setTripComputer(TripComputer tripComputer);
+    void setGPSNavigator(GPSNavigator gpsNavigator);
 }
