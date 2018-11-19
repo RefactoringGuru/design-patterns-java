@@ -38,7 +38,7 @@ public class PayByPayPal implements PayStrategy {
                 System.out.print("Enter the password: ");
                 password = READER.readLine();
                 if (verify()) {
-                    System.out.println("Data verification has been successfull.");
+                    System.out.println("Data verification has been successful.");
                 } else {
                     System.out.println("Wrong email or password!");
                 }
