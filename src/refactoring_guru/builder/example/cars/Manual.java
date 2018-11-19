@@ -4,7 +4,6 @@ import refactoring_guru.builder.example.components.Engine;
 import refactoring_guru.builder.example.components.GPSNavigator;
 import refactoring_guru.builder.example.components.Transmission;
 import refactoring_guru.builder.example.components.TripComputer;
-import refactoring_guru.builder.example.components.*;
 
 /**
  * EN: Car manual is another product. Note that it does not have the same

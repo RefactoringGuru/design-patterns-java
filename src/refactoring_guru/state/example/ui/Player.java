@@ -1,6 +1,5 @@
 package refactoring_guru.state.example.ui;
 
-import refactoring_guru.state.example.states.*;
 import refactoring_guru.state.example.states.ReadyState;
 import refactoring_guru.state.example.states.State;
 

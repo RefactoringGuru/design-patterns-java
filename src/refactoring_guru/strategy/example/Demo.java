@@ -5,8 +5,11 @@ import refactoring_guru.strategy.example.strategies.PayByCreditCard;
 import refactoring_guru.strategy.example.strategies.PayByPayPal;
 import refactoring_guru.strategy.example.strategies.PayStrategy;
 
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * EN: World first console e-commerce application.

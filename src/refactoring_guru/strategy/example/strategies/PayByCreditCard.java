@@ -1,6 +1,8 @@
 package refactoring_guru.strategy.example.strategies;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 /**
  * EN: Concrete strategy. Implements credit card payment method.

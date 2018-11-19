@@ -1,6 +1,5 @@
 package refactoring_guru.visitor.example.visitor;
 
-import refactoring_guru.visitor.example.shapes.*;
 import refactoring_guru.visitor.example.shapes.Circle;
 import refactoring_guru.visitor.example.shapes.CompoundShape;
 import refactoring_guru.visitor.example.shapes.Dot;

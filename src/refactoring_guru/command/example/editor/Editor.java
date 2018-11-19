@@ -1,7 +1,6 @@
 package refactoring_guru.command.example.editor;
 
 import refactoring_guru.command.example.commands.*;
-import refactoring_guru.command.example.commands.*;
 
 import javax.swing.*;
 import java.awt.*;

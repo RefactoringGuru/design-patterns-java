@@ -1,7 +1,6 @@
 package refactoring_guru.visitor.example;
 
 import refactoring_guru.visitor.example.shapes.*;
-import refactoring_guru.visitor.example.shapes.*;
 import refactoring_guru.visitor.example.visitor.XMLExportVisitor;
 
 public class Demo {

@@ -1,10 +1,10 @@
 package refactoring_guru.memento.example;
 
+import refactoring_guru.memento.example.editor.Editor;
 import refactoring_guru.memento.example.shapes.Circle;
 import refactoring_guru.memento.example.shapes.CompoundShape;
 import refactoring_guru.memento.example.shapes.Dot;
 import refactoring_guru.memento.example.shapes.Rectangle;
-import refactoring_guru.memento.example.editor.Editor;
 
 import java.awt.*;
 

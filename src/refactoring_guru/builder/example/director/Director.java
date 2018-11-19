@@ -1,12 +1,11 @@
 package refactoring_guru.builder.example.director;
 
+import refactoring_guru.builder.example.builders.Builder;
 import refactoring_guru.builder.example.cars.Type;
 import refactoring_guru.builder.example.components.Engine;
 import refactoring_guru.builder.example.components.GPSNavigator;
 import refactoring_guru.builder.example.components.Transmission;
-import refactoring_guru.builder.example.builders.Builder;
 import refactoring_guru.builder.example.components.TripComputer;
-import refactoring_guru.builder.example.components.*;
 
 /**
  * EN: Director defines the order of building steps. It works with a builder

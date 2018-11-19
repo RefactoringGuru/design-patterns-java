@@ -4,7 +4,9 @@ import refactoring_guru.template_method.example.networks.Facebook;
 import refactoring_guru.template_method.example.networks.Network;
 import refactoring_guru.template_method.example.networks.Twitter;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 /**
  * EN: Demo class. Everything comes together here.

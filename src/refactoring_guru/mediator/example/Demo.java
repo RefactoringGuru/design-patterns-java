@@ -3,8 +3,6 @@ package refactoring_guru.mediator.example;
 import refactoring_guru.mediator.example.components.*;
 import refactoring_guru.mediator.example.mediator.Editor;
 import refactoring_guru.mediator.example.mediator.Mediator;
-import refactoring_guru.mediator.example.components.*;
-import refactoring_guru.mediator.example.mediator.*;
 
 import javax.swing.*;
 

@@ -1,13 +1,12 @@
 package refactoring_guru.composite.example;
 
+import refactoring_guru.composite.example.editor.ImageEditor;
 import refactoring_guru.composite.example.shapes.Circle;
 import refactoring_guru.composite.example.shapes.CompoundShape;
 import refactoring_guru.composite.example.shapes.Dot;
 import refactoring_guru.composite.example.shapes.Rectangle;
-import refactoring_guru.composite.example.editor.ImageEditor;
-import refactoring_guru.composite.example.shapes.*;
 
-import java.awt.Color;
+import java.awt.*;
 
 public class Demo {
     public static void main(String[] args) {

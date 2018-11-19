@@ -1,10 +1,10 @@
 package refactoring_guru.iterator.example;
 
-import refactoring_guru.iterator.example.social_networks.Facebook;
-import refactoring_guru.iterator.example.spammer.SocialSpammer;
 import refactoring_guru.iterator.example.profile.Profile;
+import refactoring_guru.iterator.example.social_networks.Facebook;
 import refactoring_guru.iterator.example.social_networks.LinkedIn;
 import refactoring_guru.iterator.example.social_networks.SocialNetwork;
+import refactoring_guru.iterator.example.spammer.SocialSpammer;
 
 import java.util.ArrayList;
 import java.util.List;

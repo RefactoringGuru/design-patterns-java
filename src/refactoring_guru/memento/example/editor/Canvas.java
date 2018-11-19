@@ -1,8 +1,8 @@
 package refactoring_guru.memento.example.editor;
 
-import refactoring_guru.memento.example.shapes.Shape;
 import refactoring_guru.memento.example.commands.ColorCommand;
 import refactoring_guru.memento.example.commands.MoveCommand;
+import refactoring_guru.memento.example.shapes.Shape;
 
 import javax.swing.*;
 import javax.swing.border.Border;

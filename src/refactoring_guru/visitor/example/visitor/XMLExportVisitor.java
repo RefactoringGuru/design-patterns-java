@@ -1,7 +1,6 @@
 package refactoring_guru.visitor.example.visitor;
 
 import refactoring_guru.visitor.example.shapes.*;
-import refactoring_guru.visitor.example.shapes.*;
 
 public class XMLExportVisitor implements Visitor {
 
