@@ -19,7 +19,7 @@ public class Engine {
         started = true;
     }
 
-    public void of() {
+    public void off() {
         started = false;
     }
 
