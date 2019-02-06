@@ -16,6 +16,7 @@ public class Demo {
         circle.x = 10;
         circle.y = 20;
         circle.radius = 15;
+        circle.color = "red";
         shapes.add(circle);
 
         Circle anotherCircle = (Circle) circle.clone();
@@ -24,6 +25,7 @@ public class Demo {
         Rectangle rectangle = new Rectangle();
         rectangle.width = 10;
         rectangle.height = 20;
+        circle.color = "blue";
         shapes.add(rectangle);
 
         cloneAndCompare(shapes, shapesCopy);
