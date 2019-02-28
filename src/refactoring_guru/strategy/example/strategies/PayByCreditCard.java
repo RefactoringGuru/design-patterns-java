@@ -30,7 +30,9 @@ public class PayByCreditCard implements PayStrategy {
             String cvv = READER.readLine();
             card = new CreditCard(number, date, cvv);
 
-            // RU: Валидируем номер карты.
+            // EN: Validate credit card number...
+            //
+            // RU: Валидируем номер карты...
 
         } catch (IOException ex) {
             ex.printStackTrace();
