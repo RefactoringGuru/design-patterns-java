@@ -41,14 +41,14 @@ public final class Singleton {
         // локальную перменную, мы можем ускорить работу с переменной, обновляя
         // значение поля только тогда, когда действительно нужно.
         Singleton result = instance;
-        if (result == null) {
-            synchronized (Singleton.class) {
-                result = instance;
-                if (result == null) {
-                    instance = result = new Singleton(value);
-                }
-            }
+        if (result != null) {
+            return result;
         }
-        return instance;
+        synchronized(this) {
+            if (instance == null) {
+                instance = new Singleton(value);
+            }
+            return instance;
+        }
     }
 }
