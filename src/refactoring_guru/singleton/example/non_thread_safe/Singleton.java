@@ -5,7 +5,7 @@ public final class Singleton {
     public String value;
 
     private Singleton(String value) {
-        // EN: Following code emulates slow initialization.
+        // EN: The following code emulates slow initialization.
         //
         // RU: Этот код эмулирует медленную инициализацию.
         try {

@@ -2,14 +2,10 @@ package refactoring_guru.singleton.example.thread_safe;
 
 public final class Singleton {
     // EN: The field must be declared volatile so that double check lock would
-    // work.
-    //
-    // See: https://refactoring.guru/java-dcl-issue
+    // work correctly.
     //
     // RU: Поле обязательно должно быть объявлено volatile, чтобы двойная
     // проверка блокировки сработала как надо.
-    //
-    // См: https://refactoring.guru/java-dcl-issue
     private static volatile Singleton instance;
 
     public String value;
@@ -19,32 +15,34 @@ public final class Singleton {
     }
 
     public static Singleton getInstance(String value) {
-        // EN: This code may appear a bit convoluted. In particular, the need
-        // for the local variable result may be unclear. This is a micro-
-        // optimization.
+        // EN: The approach taken here is called double-checked locking (DCL).
+        // It exists to prevent race condition between multiple threads that may
+        // attempt to get singleton instance at the same time, creating
+        // separate instances as a result.
         //
-        // The field would be read first time in the first if statement and
-        // second time in the return statement. The field is declared volatile,
-        // which means it has to be refetched from memory every time it is
-        // accessed (more processing is required to access volatile variables)
-        // and can not be stored into a register by the compiler. When copied to
-        // the local variable and then used in both statements (if and return),
-        // the register optimization can be done by the JVM.
+        // It may seem that having the `result` variable here is completely
+        // pointless. There is, however, a very important caveat when
+        // implementing double-checked locking in Java, which is solved by
+        // introducing this local variable.
         //
-        // RU: Вам может быть неясно зачем мы используем дублирующую локальную
-        // переменную здесь. Это — микрооптимизация.
+        // You can read more info DCL issues in Java here:
+        // https://refactoring.guru/java-dcl-issue
         //
-        // Поле одиночки объявлено как volatile, что заставляет программу
-        // обновлять её значение из памяти каждый раз при доступе к переменной,
-        // тогда как значение обычной переменной может быть записано в регистр
-        // процессора для более быстрого чтения. Используя дополнительную
-        // локальную перменную, мы можем ускорить работу с переменной, обновляя
-        // значение поля только тогда, когда действительно нужно.
+        // RU: Тезника, которую мы здесь применяем называется «блокировка с
+        // двойной проверкой» (Double-Checked Locking). Она применяется, чтобы
+        // предотвратить создание нескольких объектов-одиночек, если метод будет
+        // вызван из нескольких потоков одновременно.
+        //
+        // Хотя переменная `result` вполне оправданно кажется здесь лишней, она
+        // помогает избежать подводных камней реализации DCL в Java.
+        //
+        // Больше об этой проблеме можно почитать здесь:
+        // https://refactoring.guru/ru/java-dcl-issue
         Singleton result = instance;
         if (result != null) {
             return result;
         }
-        synchronized(this) {
+        synchronized(Singleton.class) {
             if (instance == null) {
                 instance = new Singleton(value);
             }
