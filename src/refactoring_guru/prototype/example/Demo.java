@@ -25,7 +25,7 @@ public class Demo {
         Rectangle rectangle = new Rectangle();
         rectangle.width = 10;
         rectangle.height = 20;
-        circle.color = "blue";
+        rectangle.color = "blue";
         shapes.add(rectangle);
 
         cloneAndCompare(shapes, shapesCopy);
