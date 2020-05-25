@@ -2,7 +2,7 @@ package refactoring_guru.proxy.example.some_cool_media_library;
 
 import java.util.HashMap;
 
-public class ThirdPartyYoutubeClass implements ThirdPartyYoutubeLib {
+public class ThirdPartyYouTubeClass implements ThirdPartyYouTubeLib {
 
     @Override
     public HashMap<String, Video> popularVideos() {

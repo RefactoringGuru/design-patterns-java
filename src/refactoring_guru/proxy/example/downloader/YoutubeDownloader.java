@@ -1,14 +1,14 @@
 package refactoring_guru.proxy.example.downloader;
 
-import refactoring_guru.proxy.example.some_cool_media_library.ThirdPartyYoutubeLib;
+import refactoring_guru.proxy.example.some_cool_media_library.ThirdPartyYouTubeLib;
 import refactoring_guru.proxy.example.some_cool_media_library.Video;
 
 import java.util.HashMap;
 
-public class YoutubeDownloader {
-    private ThirdPartyYoutubeLib api;
+public class YouTubeDownloader {
+    private ThirdPartyYouTubeLib api;
 
-    public YoutubeDownloader(ThirdPartyYoutubeLib api) {
+    public YouTubeDownloader(ThirdPartyYouTubeLib api) {
         this.api = api;
     }
 
@@ -25,7 +25,7 @@ public class YoutubeDownloader {
     public void renderPopularVideos() {
         HashMap<String, Video> list = api.popularVideos();
         System.out.println("\n-------------------------------");
-        System.out.println("Most popular videos on Youtube (imagine fancy HTML)");
+        System.out.println("Most popular videos on YouTube (imagine fancy HTML)");
         for (Video video : list.values()) {
             System.out.println("ID: " + video.id + " / Title: " + video.title);
         }

@@ -1,18 +1,18 @@
 package refactoring_guru.proxy.example.proxy;
 
-import refactoring_guru.proxy.example.some_cool_media_library.ThirdPartyYoutubeClass;
-import refactoring_guru.proxy.example.some_cool_media_library.ThirdPartyYoutubeLib;
+import refactoring_guru.proxy.example.some_cool_media_library.ThirdPartyYouTubeClass;
+import refactoring_guru.proxy.example.some_cool_media_library.ThirdPartyYouTubeLib;
 import refactoring_guru.proxy.example.some_cool_media_library.Video;
 
 import java.util.HashMap;
 
-public class YoutubeCacheProxy implements ThirdPartyYoutubeLib {
-    private ThirdPartyYoutubeLib youtubeService;
+public class YouTubeCacheProxy implements ThirdPartyYouTubeLib {
+    private ThirdPartyYouTubeLib youtubeService;
     private HashMap<String, Video> cachePopular = new HashMap<String, Video>();
     private HashMap<String, Video> cacheAll = new HashMap<String, Video>();
 
-    public YoutubeCacheProxy() {
-        this.youtubeService = new ThirdPartyYoutubeClass();
+    public YouTubeCacheProxy() {
+        this.youtubeService = new ThirdPartyYouTubeClass();
     }
 
     @Override
