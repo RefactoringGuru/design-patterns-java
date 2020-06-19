@@ -6,11 +6,9 @@ public class XMLExportVisitor implements Visitor {
 
     public String export(Shape... args) {
         StringBuilder sb = new StringBuilder();
+        sb.append("<?xml version=\"1.0\" encoding=\"utf-8\"?>" + "\n");
         for (Shape shape : args) {
-            sb.append("<?xml version=\"1.0\" encoding=\"utf-8\"?>" + "\n");
             sb.append(shape.accept(this)).append("\n");
-            System.out.println(sb.toString());
-            sb.setLength(0);
         }
         return sb.toString();
     }
