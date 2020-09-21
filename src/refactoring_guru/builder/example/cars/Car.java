@@ -25,8 +25,10 @@ public class Car {
         this.seats = seats;
         this.engine = engine;
         this.transmission = transmission;
-        this.tripComputer = tripComputer;
-        this.tripComputer.setCar(this);
+        if (tripComputer != null) {
+            this.tripComputer = tripComputer;
+            this.tripComputer.setCar(this);
+        }
         this.gpsNavigator = gpsNavigator;
     }
 
