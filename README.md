@@ -4,6 +4,15 @@ This repository is part of the [Refactoring.Guru](https://refactoring.guru/desig
 
 It contains Java examples for all classic GoF design patterns.
 
+# Advantages of design patterns in java
+
+1. They are reusable in multiple projects.
+2. They provide the solutions that help to define the system architecture.
+3. They capture the software engineering experiences.
+4. They provide transparency to the design of an application.
+5. They are well-proved and testified solutions since they have been built upon the knowledge and experience of expert software developers.
+6. Design patterns don't guarantee an absolute solution to a problem. They provide clarity to the system architecture and the possibility of building a better system.
+
 
 ## Requirements
 
