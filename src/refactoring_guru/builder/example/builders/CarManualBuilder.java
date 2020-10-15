@@ -1,7 +1,7 @@
 package refactoring_guru.builder.example.builders;
 
 import refactoring_guru.builder.example.cars.Manual;
-import refactoring_guru.builder.example.cars.Type;
+import refactoring_guru.builder.example.cars.CarType;
 import refactoring_guru.builder.example.components.Engine;
 import refactoring_guru.builder.example.components.GPSNavigator;
 import refactoring_guru.builder.example.components.Transmission;
@@ -23,7 +23,7 @@ import refactoring_guru.builder.example.components.TripComputer;
  * руководства под конкретные модели автомобилей, содержащие те или иные фичи.
  */
 public class CarManualBuilder implements Builder{
-    private Type type;
+    private CarType type;
     private int seats;
     private Engine engine;
     private Transmission transmission;
@@ -31,7 +31,7 @@ public class CarManualBuilder implements Builder{
     private GPSNavigator gpsNavigator;
 
     @Override
-    public void setType(Type type) {
+    public void setCarType(CarType type) {
         this.type = type;
     }
 

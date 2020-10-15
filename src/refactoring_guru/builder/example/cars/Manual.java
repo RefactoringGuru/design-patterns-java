@@ -13,16 +13,16 @@ import refactoring_guru.builder.example.components.TripComputer;
  * сам автомобиль не имеют общего родительского класса. По сути, они независимы.
  */
 public class Manual {
-    private final Type type;
+    private final CarType carType;
     private final int seats;
     private final Engine engine;
     private final Transmission transmission;
     private final TripComputer tripComputer;
     private final GPSNavigator gpsNavigator;
 
-    public Manual(Type type, int seats, Engine engine, Transmission transmission,
+    public Manual(CarType carType, int seats, Engine engine, Transmission transmission,
                   TripComputer tripComputer, GPSNavigator gpsNavigator) {
-        this.type = type;
+        this.carType = carType;
         this.seats = seats;
         this.engine = engine;
         this.transmission = transmission;
@@ -32,7 +32,7 @@ public class Manual {
 
     public String print() {
         String info = "";
-        info += "Type of car: " + type + "\n";
+        info += "Type of car: " + carType + "\n";
         info += "Count of seats: " + seats + "\n";
         info += "Engine: volume - " + engine.getVolume() + "; mileage - " + engine.getMileage() + "\n";
         info += "Transmission: " + transmission + "\n";

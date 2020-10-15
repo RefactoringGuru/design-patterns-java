@@ -1,7 +1,7 @@
 package refactoring_guru.builder.example.builders;
 
 import refactoring_guru.builder.example.cars.Car;
-import refactoring_guru.builder.example.cars.Type;
+import refactoring_guru.builder.example.cars.CarType;
 import refactoring_guru.builder.example.components.Engine;
 import refactoring_guru.builder.example.components.GPSNavigator;
 import refactoring_guru.builder.example.components.Transmission;
@@ -13,15 +13,14 @@ import refactoring_guru.builder.example.components.TripComputer;
  * RU: Конкретные строители реализуют шаги, объявленные в общем интерфейсе.
  */
 public class CarBuilder implements Builder {
-    private Type type;
+    private CarType type;
     private int seats;
     private Engine engine;
     private Transmission transmission;
     private TripComputer tripComputer;
     private GPSNavigator gpsNavigator;
 
-    @Override
-    public void setType(Type type) {
+    public void setCarType(CarType type) {
         this.type = type;
     }
 

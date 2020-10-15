@@ -33,7 +33,7 @@ public class Demo {
         // RU: Готовый продукт возвращает строитель, так как Директор чаще всего
         // не знает и не зависит от конкретных классов строителей и продуктов.
         Car car = builder.getResult();
-        System.out.println("Car built:\n" + car.getType());
+        System.out.println("Car built:\n" + car.getCarType());
 
 
         CarManualBuilder manualBuilder = new CarManualBuilder();

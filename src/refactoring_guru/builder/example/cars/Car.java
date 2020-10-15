@@ -11,7 +11,7 @@ import refactoring_guru.builder.example.components.TripComputer;
  * RU: Автомобиль — это класс продукта.
  */
 public class Car {
-    private final Type type;
+    private final CarType carType;
     private final int seats;
     private final Engine engine;
     private final Transmission transmission;
@@ -19,21 +19,21 @@ public class Car {
     private final GPSNavigator gpsNavigator;
     private double fuel = 0;
 
-    public Car(Type type, int seats, Engine engine, Transmission transmission,
+    public Car(CarType carType, int seats, Engine engine, Transmission transmission,
                TripComputer tripComputer, GPSNavigator gpsNavigator) {
-        this.type = type;
+        this.carType = carType;
         this.seats = seats;
         this.engine = engine;
         this.transmission = transmission;
-        if (tripComputer != null) {
-            this.tripComputer = tripComputer;
+        this.tripComputer = tripComputer;
+        if (this.tripComputer != null) {
             this.tripComputer.setCar(this);
         }
         this.gpsNavigator = gpsNavigator;
     }
 
-    public Type getType() {
-        return type;
+    public CarType getCarType() {
+        return carType;
     }
 
     public double getFuel() {
