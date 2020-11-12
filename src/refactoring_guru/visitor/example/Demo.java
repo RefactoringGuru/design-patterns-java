@@ -22,7 +22,7 @@ public class Demo {
     }
 
     private static void export(Shape... shapes) {
-        XMLExportVisitor exportVisitor = new XMLExportVisitor();
+        Visitor exportVisitor = new XMLExportVisitor();
         System.out.println(exportVisitor.export(shapes));
     }
 }
