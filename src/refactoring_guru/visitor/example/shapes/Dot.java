@@ -26,6 +26,7 @@ public class Dot implements Shape {
         // draw shape
     }
 
+    @Override
     public String accept(Visitor visitor) {
         return visitor.visitDot(this);
     }
