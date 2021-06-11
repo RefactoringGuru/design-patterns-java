@@ -7,11 +7,11 @@ import refactoring_guru.interpreter.example.expressions.VariableExpression;
 
 /**
  * EN: Interpreter Design Pattern
- * <p>
+ * 
  * Defines a representation for a grammar as well as a mechanism to understand and act upon the grammar.
- * <p>
+ * 
  * RU: Паттерн Интерпретатор
- * <p>
+ * 
  * Определяет грамматику простого языка, представляет предложения на этом языке и интерпретирует их.
  */
 public class Demo {
