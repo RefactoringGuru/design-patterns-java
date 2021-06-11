@@ -1,0 +1,2 @@
+boolean expression A ∧ (B ∨ C) = true, with variables A=true, B=true, C=false
+boolean expression B ∨ (A ∧ (B ∨ C)) = false, with variables A=false, B=false, C=true
