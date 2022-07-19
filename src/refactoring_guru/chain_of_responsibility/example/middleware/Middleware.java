@@ -13,9 +13,13 @@ public abstract class Middleware {
      *
      * RU: Помогает строить цепь из объектов-проверок.
      */
-    public Middleware linkWith(Middleware next) {
-        this.next = next;
-        return next;
+    public static Middleware link(Middleware first, Middleware... chain) {
+        Middleware head = first;
+        for (Middleware nextInChain: chain) {
+            head.next = nextInChain;
+            head = nextInChain;
+        }
+        return first;
     }
 
     /**

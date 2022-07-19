@@ -29,9 +29,11 @@ public class Demo {
         //
         // RU: Проверки связаны в одну цепь. Клиент может строить различные
         // цепи, используя одни и те же компоненты.
-        Middleware middleware = new ThrottlingMiddleware(2);
-        middleware.linkWith(new UserExistsMiddleware(server))
-                .linkWith(new RoleCheckMiddleware());
+        Middleware middleware = Middleware.link(
+            new ThrottlingMiddleware(2),
+            new UserExistsMiddleware(server),
+            new RoleCheckMiddleware()
+        );
 
         // EN: Server gets a chain from client code.
         //

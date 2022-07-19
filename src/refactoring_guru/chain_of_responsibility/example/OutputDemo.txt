@@ -4,7 +4,12 @@ Hello, admin!
 Authorization have been successful!
 
 
-Enter email: user@example.com
-Input password: user_pass
-Hello, user!
-Authorization have been successful!
+Enter email: wrong@example.com
+Input password: wrong_pass
+This email is not registered!
+Enter email: wrong@example.com
+Input password: wrong_pass
+This email is not registered!
+Enter email: wrong@example.com
+Input password: wrong_pass
+Request limit exceeded!
