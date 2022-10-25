@@ -8,9 +8,8 @@ public class Circle extends Shape {
 
     public Circle(Circle target) {
         super(target);
-        if (target != null) {
-            this.radius = target.radius;
-        }
+        
+        this.radius = target.radius;
     }
 
     @Override
