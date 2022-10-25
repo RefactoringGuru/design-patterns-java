@@ -11,11 +11,11 @@ public abstract class Shape {
     }
 
     public Shape(Shape target) {
-        if (target != null) {
-            this.x = target.x;
-            this.y = target.y;
-            this.color = target.color;
-        }
+        Objects.requireNonNull(target);
+        
+        this.x = target.x;
+        this.y = target.y;
+        this.color = target.color;
     }
 
     public abstract Shape clone();
