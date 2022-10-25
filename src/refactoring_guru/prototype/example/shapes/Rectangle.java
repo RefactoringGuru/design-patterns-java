@@ -9,10 +9,9 @@ public class Rectangle extends Shape {
 
     public Rectangle(Rectangle target) {
         super(target);
-        if (target != null) {
-            this.width = target.width;
-            this.height = target.height;
-        }
+        
+        this.width = target.width;
+        this.height = target.height;
     }
 
     @Override
