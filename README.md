@@ -52,7 +52,6 @@ Here's a style guide which might help you to keep your changes consistent with o
 
     class Button { ... }
    
-   ```java
     package refactoring_guru.factory_method.example.factories;
 
     import Button;
