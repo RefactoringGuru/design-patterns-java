@@ -7,34 +7,40 @@ import refactoring_guru.abstract_factory.example.factories.WindowsFactory;
 
 /**
  * EN: Demo class. Everything comes together here.
- *
+ * <p>
  * RU: Демо-класс. Здесь всё сводится воедино.
  */
 public class Demo {
-
-    /**
-     * EN: Application picks the factory type and creates it in run time
-     * (usually at initialization stage), depending on the configuration or
-     * environment variables.
-     *
-     * RU: Приложение выбирает тип и создаёт конкретные фабрики динамически
-     * исходя из конфигурации или окружения.
-     */
-    private static Application configureApplication() {
-        Application app;
-        GUIFactory factory;
-        String osName = System.getProperty("os.name").toLowerCase();
-        if (osName.contains("mac")) {
-            factory = new MacOSFactory();
-        } else {
-            factory = new WindowsFactory();
-        }
-        app = new Application(factory);
-        return app;
-    }
-
     public static void main(String[] args) {
         Application app = configureApplication();
         app.paint();
+    }
+
+    /**
+     * EN: Configures the application with the appropriate GUI factory based on the OS.
+     * Dynamically selects the factory type depending on the current system configuration.
+     * <p>
+     * RU: Конфигурирует приложение с соответствующей фабрикой GUI на основе ОС.
+     * Динамически выбирает тип фабрики в зависимости от текущей системной конфигурации.
+     *
+     * @return An instance of the Application configured with the appropriate GUI factory.
+     */
+    private static Application configureApplication() {
+        GUIFactory factory = getOSGUIFactory();
+        return new Application(factory);
+    }
+
+    /**
+     * EN: Determines the appropriate GUI factory based on the operating system.
+     * Checks the current system's OS property to decide which factory to instantiate.
+     * <p>
+     * RU: Определяет соответствующую фабрику GUI на основе операционной системы.
+     * Проверяет свойство OS текущей системы, чтобы решить, какую фабрику создать.
+     *
+     * @return The GUIFactory instance corresponding to the detected operating system.
+     */
+    private static GUIFactory getOSGUIFactory() {
+        String osName = System.getProperty("os.name").toLowerCase();
+        return osName.contains("mac") ? new MacOSFactory() : new WindowsFactory();
     }
 }
