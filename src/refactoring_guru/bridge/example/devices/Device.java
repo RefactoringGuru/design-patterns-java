@@ -1,19 +1,19 @@
 package refactoring_guru.bridge.example.devices;
 
 public interface Device {
-    boolean isEnabled();
+  boolean isEnabled();
 
-    void enable();
+  void enable();
 
-    void disable();
+  void disable();
 
-    int getVolume();
+  int getVolume();
 
-    void setVolume(int percent);
+  void setVolume(int percent);
 
-    int getChannel();
+  int getChannel();
 
-    void setChannel(int channel);
+  void setChannel(int channel);
 
-    void printStatus();
+  void printStatus();
 }
