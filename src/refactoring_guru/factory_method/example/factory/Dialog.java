@@ -14,10 +14,6 @@ import refactoring_guru.factory_method.example.buttons.Button;
 public abstract class Dialog {
 
   public void renderWindow() {
-    // EN: ... other code ...
-    //
-    // RU: ... остальной код диалога ...
-
     Button okButton = createButton();
     okButton.render();
   }
