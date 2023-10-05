@@ -1,95 +1,82 @@
 package refactoring_guru.strategy.example;
 
+import refactoring_guru.strategy.example.init.PaymentMethod;
+import refactoring_guru.strategy.example.init.Product;
 import refactoring_guru.strategy.example.order.Order;
-import refactoring_guru.strategy.example.strategies.PayByCreditCard;
-import refactoring_guru.strategy.example.strategies.PayByPayPal;
 import refactoring_guru.strategy.example.strategies.PayStrategy;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * EN: World first console e-commerce application.
- *
- * RU: Первый в мире консольный интерет магазин.
+ * <p>
+ * RU: Первый в мире консольный интернет магазин.
  */
 public class Demo {
-    private static Map<Integer, Integer> priceOnProducts = new HashMap<>();
-    private static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-    private static Order order = new Order();
-    private static PayStrategy strategy;
+  private static final BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+  private static final Order order = new Order();
+  private static PayStrategy strategy;
 
-    static {
-        priceOnProducts.put(1, 2200);
-        priceOnProducts.put(2, 1850);
-        priceOnProducts.put(3, 1100);
-        priceOnProducts.put(4, 890);
+  private static final String PRODUCT_SELECTION_TEXT = """
+          Please select a product:
+          1 - Mother board
+          2 - CPU
+          3 - HDD
+          4 - Memory
+          """;
+
+  private static final String PAYMENT_METHOD_TEXT = """
+          Please select a payment method:
+          1 - PalPay
+          2 - Credit Card
+          """;
+
+  public static void main(String[] args) throws IOException {
+    while (!order.isClosed()) {
+      processUserInput();
+      processPayment();
+    }
+  }
+
+  private static void processUserInput() throws IOException {
+    String continueChoice = "";
+    do {
+      System.out.print(PRODUCT_SELECTION_TEXT);
+      try {
+        int choice = Integer.parseInt(bufferedReader.readLine());
+        Product product = Product.fromChoice(choice);
+        System.out.print("Count: ");
+        int count = Integer.parseInt(bufferedReader.readLine());
+        order.setTotalCost(product.getPrice() * count);
+      } catch (IllegalArgumentException e) {
+        System.out.println("Invalid input. Please try again.");
+        continue;
+      }
+      System.out.print("Do you wish to continue selecting products? Y/N: ");
+      continueChoice = bufferedReader.readLine();
+    } while (continueChoice.equalsIgnoreCase("Y"));
+  }
+
+  private static void processPayment() throws IOException {
+    if (strategy == null) {
+      System.out.println(PAYMENT_METHOD_TEXT);
+      var paymentMethod = bufferedReader.readLine();
+      strategy = PaymentMethod.fromChoice(Integer.parseInt(paymentMethod)).createStrategy();
     }
 
-    public static void main(String[] args) throws IOException {
-        while (!order.isClosed()) {
-            int cost;
+    order.processOrder(strategy);
 
-            String continueChoice;
-            do {
-                System.out.print("Please, select a product:" + "\n" +
-                        "1 - Mother board" + "\n" +
-                        "2 - CPU" + "\n" +
-                        "3 - HDD" + "\n" +
-                        "4 - Memory" + "\n");
-                int choice = Integer.parseInt(reader.readLine());
-                cost = priceOnProducts.get(choice);
-                System.out.print("Count: ");
-                int count = Integer.parseInt(reader.readLine());
-                order.setTotalCost(cost * count);
-                System.out.print("Do you wish to continue selecting products? Y/N: ");
-                continueChoice = reader.readLine();
-            } while (continueChoice.equalsIgnoreCase("Y"));
-
-            if (strategy == null) {
-                System.out.println("Please, select a payment method:" + "\n" +
-                        "1 - PalPay" + "\n" +
-                        "2 - Credit Card");
-                String paymentMethod = reader.readLine();
-
-                // EN: Client creates different strategies based on input from
-                // user, application configuration, etc.
-                //
-                // RU: Клиент создаёт различные стратегии на основании
-                // пользовательских данных, конфигурации и прочих параметров.
-                if (paymentMethod.equals("1")) {
-                    strategy = new PayByPayPal();
-                } else {
-                    strategy = new PayByCreditCard();
-                }
-            }
-
-            // EN: Order object delegates gathering payment data to strategy
-            // object, since only strategies know what data they need to
-            // process a payment.
-            //
-            // RU: Объект заказа делегирует сбор платёжных данны стратегии,
-            // т.к. только стратегии знают какие данные им нужны для приёма
-            // оплаты.
-            order.processOrder(strategy);
-
-            System.out.print("Pay " + order.getTotalCost() + " units or Continue shopping? P/C: ");
-            String proceed = reader.readLine();
-            if (proceed.equalsIgnoreCase("P")) {
-                // EN: Finally, strategy handles the payment.
-                //
-                // RU: И наконец, стратегия запускает приём платежа.
-                if (strategy.pay(order.getTotalCost())) {
-                    System.out.println("Payment has been successful.");
-                } else {
-                    System.out.println("FAIL! Please, check your data.");
-                }
-                order.setClosed();
-            }
-        }
+    System.out.print("Pay " + order.getTotalCost() + " units or Continue shopping? P/C: ");
+    var proceed = bufferedReader.readLine();
+    if (proceed.equalsIgnoreCase("P")) {
+      if (strategy.pay(order.getTotalCost())) {
+        System.out.println("Payment has been successful.");
+      } else {
+        System.out.println("FAIL! Please, check your data.");
+      }
+      order.setClosed();
     }
+  }
 }
-
