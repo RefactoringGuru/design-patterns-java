@@ -3,9 +3,9 @@ package refactoring_guru.iterator.example.iterators;
 import refactoring_guru.iterator.example.profile.Profile;
 
 public interface ProfileIterator {
-    boolean hasNext();
+  boolean hasNext();
 
-    Profile getNext();
+  Profile getNext();
 
-    void reset();
+  void reset();
 }
