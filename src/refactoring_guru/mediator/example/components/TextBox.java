@@ -8,25 +8,25 @@ import java.awt.event.KeyEvent;
 /**
  * EN: Concrete components don't talk with each other. They have only one
  * communication channel–sending requests to the mediator.
- * <p>
+ *
  * RU: Конкретные компоненты никак не связаны между собой. У них есть только
  * один канал общения – через отправку уведомлений посреднику.
  */
 public class TextBox extends JTextArea implements Component {
-  private transient Mediator mediator;
+    private Mediator mediator;
 
-  @Override
-  public void setMediator(Mediator mediator) {
-    this.mediator = mediator;
-  }
+    @Override
+    public void setMediator(Mediator mediator) {
+        this.mediator = mediator;
+    }
 
-  @Override
-  protected void processComponentKeyEvent(KeyEvent keyEvent) {
-    mediator.markNote();
-  }
+    @Override
+    protected void processComponentKeyEvent(KeyEvent keyEvent) {
+        mediator.markNote();
+    }
 
-  @Override
-  public String getName() {
-    return "TextBox";
-  }
+    @Override
+    public String getName() {
+        return "TextBox";
+    }
 }

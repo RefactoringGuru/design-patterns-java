@@ -1,20 +1,17 @@
 package refactoring_guru.command.example.commands;
 
-import java.util.ArrayDeque;
-import java.util.Deque;
+import java.util.Stack;
 
 public class CommandHistory {
-  private final Deque<Command> history = new ArrayDeque<>();
+    private Stack<Command> history = new Stack<>();
 
-  public void push(Command c) {
-    history.push(c);
-  }
+    public void push(Command c) {
+        history.push(c);
+    }
 
-  public Command pop() {
-    return history.pop();
-  }
+    public Command pop() {
+        return history.pop();
+    }
 
-  public boolean isEmpty() {
-    return history.isEmpty();
-  }
+    public boolean isEmpty() { return history.isEmpty(); }
 }

@@ -34,14 +34,16 @@ Here's a style guide which might help you to keep your changes consistent with o
 
 1. All code should meet the [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html)
 
-2. Try to wrap the code at 80th's character. It helps to list the code on the website without scrollbars.
+2. Try to hard wrap the code at 80th's character. It helps to list the code on the website without scrollbars.
 
-3. Examples should match the following package convention: refactoring_guru.{pattern}.{example_name}. Example:
+3. Examples should match following package convention: refactoring_guru.{pattern}.{example_name}. Example:
 
     ```java
     package refactoring_guru.factory_method.ui_example.buttons;
 
-    class Button { ... }
+    class Button {
+    ...
+    ```
 
 4. Places classes into separate files.
 
@@ -50,24 +52,29 @@ Here's a style guide which might help you to keep your changes consistent with o
     ```java
     package refactoring_guru.factory_method.example.buttons;
 
-    class Button { ... }
-   
+    class Button {
+    ...
+    ```
+
+    ```java
     package refactoring_guru.factory_method.example.factories;
 
     import Button;
 
-    class Factory { ... }
+    class Factory {
+    ...
+    ```
 
 6. Comments may or may not have language tags in them, such as this:
 
     ```java
     /**
      * EN: All products families have the same varieties (MacOS/Windows).
-     * <p>
+     *
      * This is a MacOS variant of a button.
-     * <p>
+     *
      * RU: Все семейства продуктов имеют одни и те же вариации (MacOS/Windows).
-     * <p>
+     *
      * Это вариант кнопки под MacOS.
      */
     ```
