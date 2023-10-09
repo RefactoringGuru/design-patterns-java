@@ -32,11 +32,11 @@ public class XMLExportVisitor implements Visitor {
 
   public String visitRectangle(Rectangle r) {
     return "<rectangle>" + "\n" +
-            "    <id>" + r.getId() + "</id>" + "\n" +
-            "    <x>" + r.getX() + "</x>" + "\n" +
-            "    <y>" + r.getY() + "</y>" + "\n" +
-            "    <width>" + r.getWidth() + "</width>" + "\n" +
-            "    <height>" + r.getHeight() + "</height>" + "\n" +
+            "    <id>" + r.id() + "</id>" + "\n" +
+            "    <x>" + r.x() + "</x>" + "\n" +
+            "    <y>" + r.y() + "</y>" + "\n" +
+            "    <width>" + r.width() + "</width>" + "\n" +
+            "    <height>" + r.height() + "</height>" + "\n" +
             "</rectangle>";
   }
 
