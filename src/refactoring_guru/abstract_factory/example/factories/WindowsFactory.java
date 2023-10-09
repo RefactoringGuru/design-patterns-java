@@ -8,18 +8,18 @@ import refactoring_guru.abstract_factory.example.checkboxes.WindowsCheckbox;
 /**
  * EN: Each concrete factory extends basic factory and responsible for creating
  * products of a single variety.
- *
+ * <p>
  * RU: Каждая конкретная фабрика знает и создаёт только продукты своей вариации.
  */
 public class WindowsFactory implements GUIFactory {
 
-    @Override
-    public Button createButton() {
-        return new WindowsButton();
-    }
+  @Override
+  public Button createButton() {
+    return new WindowsButton();
+  }
 
-    @Override
-    public Checkbox createCheckbox() {
-        return new WindowsCheckbox();
-    }
+  @Override
+  public Checkbox createCheckbox() {
+    return new WindowsCheckbox();
+  }
 }

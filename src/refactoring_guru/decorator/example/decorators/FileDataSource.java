@@ -1,35 +1,36 @@
 package refactoring_guru.decorator.example.decorators;
 
-import java.io.*;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class FileDataSource implements DataSource {
-    private String name;
+  private final String name;
 
-    public FileDataSource(String name) {
-        this.name = name;
-    }
+  public FileDataSource(String name) {
+    this.name = name;
+  }
 
-    @Override
-    public void writeData(String data) {
-        File file = new File(name);
-        try (OutputStream fos = new FileOutputStream(file)) {
-            fos.write(data.getBytes(), 0, data.length());
-        } catch (IOException ex) {
-            System.out.println(ex.getMessage());
-        }
+  @Override
+  public void writeData(String data) {
+    Path path = Paths.get(name);
+    try (BufferedWriter writer = Files.newBufferedWriter(path, StandardCharsets.UTF_8)) {
+      writer.write(data, 0, data.length());
+    } catch (IOException ex) {
+      throw new RuntimeException("Failed to write data to file: " + name, ex);
     }
+  }
 
-    @Override
-    public String readData() {
-        char[] buffer = null;
-        File file = new File(name);
-        try (FileReader reader = new FileReader(file)) {
-            buffer = new char[(int) file.length()];
-            reader.read(buffer);
-        } catch (IOException ex) {
-            System.out.println(ex.getMessage());
-        }
-        return new String(buffer);
+  @Override
+  public String readData() {
+    Path path = Paths.get(name);
+    try {
+      return Files.readString(path);
+    } catch (IOException ex) {
+      throw new RuntimeException("Failed to read data from file: " + name, ex);
     }
+  }
 }
-

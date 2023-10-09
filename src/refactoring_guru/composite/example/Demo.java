@@ -9,24 +9,25 @@ import refactoring_guru.composite.example.shapes.Rectangle;
 import java.awt.*;
 
 public class Demo {
-    public static void main(String[] args) {
-        ImageEditor editor = new ImageEditor();
+  public static void main(String[] args) {
+    ImageEditor editor = new ImageEditor();
+    createAndLoadShapes(editor);
+  }
 
-        editor.loadShapes(
-                new Circle(10, 10, 10, Color.BLUE),
+  private static void createAndLoadShapes(ImageEditor editor) {
+    Circle blueCircle = new Circle(10, 10, 10, Color.BLUE);
 
-                new CompoundShape(
-                    new Circle(110, 110, 50, Color.RED),
-                    new Dot(160, 160, Color.RED)
-                ),
+    Circle redCircle = new Circle(110, 110, 50, Color.RED);
+    Dot redDot = new Dot(160, 160, Color.RED);
+    CompoundShape redCompound = new CompoundShape(redCircle, redDot);
 
-                new CompoundShape(
-                        new Rectangle(250, 250, 100, 100, Color.GREEN),
-                        new Dot(240, 240, Color.GREEN),
-                        new Dot(240, 360, Color.GREEN),
-                        new Dot(360, 360, Color.GREEN),
-                        new Dot(360, 240, Color.GREEN)
-                )
-        );
-    }
+    Rectangle greenRectangle = new Rectangle(250, 250, 100, 100, Color.GREEN);
+    Dot dot1 = new Dot(240, 240, Color.GREEN);
+    Dot dot2 = new Dot(240, 360, Color.GREEN);
+    Dot dot3 = new Dot(360, 360, Color.GREEN);
+    Dot dot4 = new Dot(360, 240, Color.GREEN);
+    CompoundShape greenCompound = new CompoundShape(greenRectangle, dot1, dot2, dot3, dot4);
+
+    editor.loadShapes(blueCircle, redCompound, greenCompound);
+  }
 }

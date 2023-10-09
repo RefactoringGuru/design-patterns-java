@@ -4,13 +4,13 @@ import refactoring_guru.command.example.editor.Editor;
 
 public class CopyCommand extends Command {
 
-    public CopyCommand(Editor editor) {
-        super(editor);
-    }
+  public CopyCommand(Editor editor) {
+    super(editor);
+  }
 
-    @Override
-    public boolean execute() {
-        editor.clipboard = editor.textField.getSelectedText();
-        return false;
-    }
+  @Override
+  public boolean execute() {
+    editor.clipboard = editor.textField.getSelectedText();
+    return false;
+  }
 }
