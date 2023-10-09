@@ -8,29 +8,29 @@ import java.awt.event.ActionEvent;
 /**
  * EN: Concrete components don't talk with each other. They have only one
  * communication channel–sending requests to the mediator.
- * <p>
+ *
  * RU: Конкретные компоненты никак не связаны между собой. У них есть только
  * один канал общения – через отправку уведомлений посреднику.
  */
 public class SaveButton extends JButton implements Component {
-  private transient Mediator mediator;
+    private Mediator mediator;
 
-  public SaveButton() {
-    super("Save");
-  }
+    public SaveButton() {
+        super("Save");
+    }
 
-  @Override
-  public void setMediator(Mediator mediator) {
-    this.mediator = mediator;
-  }
+    @Override
+    public void setMediator(Mediator mediator) {
+        this.mediator = mediator;
+    }
 
-  @Override
-  protected void fireActionPerformed(ActionEvent actionEvent) {
-    mediator.saveChanges();
-  }
+    @Override
+    protected void fireActionPerformed(ActionEvent actionEvent) {
+        mediator.saveChanges();
+    }
 
-  @Override
-  public String getName() {
-    return "SaveButton";
-  }
+    @Override
+    public String getName() {
+        return "SaveButton";
+    }
 }

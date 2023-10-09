@@ -1,19 +1,19 @@
 package refactoring_guru.decorator.example.decorators;
 
 public class DataSourceDecorator implements DataSource {
-  private final DataSource dataSource;
+    private DataSource wrappee;
 
-  DataSourceDecorator(DataSource source) {
-    this.dataSource = source;
-  }
+    DataSourceDecorator(DataSource source) {
+        this.wrappee = source;
+    }
 
-  @Override
-  public void writeData(String data) {
-    dataSource.writeData(data);
-  }
+    @Override
+    public void writeData(String data) {
+        wrappee.writeData(data);
+    }
 
-  @Override
-  public String readData() {
-    return dataSource.readData();
-  }
+    @Override
+    public String readData() {
+        return wrappee.readData();
+    }
 }
