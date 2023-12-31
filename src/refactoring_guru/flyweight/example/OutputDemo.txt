@@ -1,0 +1,7 @@
+1000000 trees drawn
+---------------------
+Memory usage:
+Tree size (8 bytes) * 1000000
++ TreeTypes size (~30 bytes) * 2
+---------------------
+Total: 7MB (instead of 36MB)

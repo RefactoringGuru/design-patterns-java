@@ -1,0 +1,15 @@
+Enter email: admin@example.com
+Input password: admin_pass
+Hello, admin!
+Authorization have been successful!
+
+
+Enter email: wrong@example.com
+Input password: wrong_pass
+This email is not registered!
+Enter email: wrong@example.com
+Input password: wrong_pass
+This email is not registered!
+Enter email: wrong@example.com
+Input password: wrong_pass
+Request limit exceeded!
