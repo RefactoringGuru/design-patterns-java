@@ -16,8 +16,8 @@ public class ThrottlingMiddleware extends Middleware {
     }
 
     /**
-     * EN: Please, not that checkNext() call can be inserted both in the
-     * beginning of this method and in the end.
+     * EN: Please, note that the checkNext() call can be inserted either at the
+     * beginning of this method or at the end.
      *
      * This gives much more flexibility than a simple loop over all middleware
      * objects. For instance, an element of a chain can change the order of
