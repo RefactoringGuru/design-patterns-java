@@ -22,13 +22,13 @@ After importing the project, you will be able to run examples by right-clicking 
 
 ## Roadmap
 
-- [ ] Add detailed comments all classes.
+- [ ] Add detailed comments to all classes.
 - [ ] Add structure-only examples.
 
 
 ## Contributor's Guide
 
-We appreciate any help, whether it's a simple fix of a typo or a whole new example. Just [make a fork](https://help.github.com/articles/fork-a-repo/), do your change and submit a [pull request](https://help.github.com/articles/creating-a-pull-request-from-a-fork/).
+We appreciate any help, whether it's a simple fix of a typo or a whole new example. Just [make a fork](https://help.github.com/articles/fork-a-repo/), make your changes, and submit a [pull request](https://help.github.com/articles/creating-a-pull-request-from-a-fork/).
 
 Here's a style guide which might help you to keep your changes consistent with our code:
 
@@ -79,7 +79,7 @@ Here's a style guide which might help you to keep your changes consistent with o
      */
     ```
 
-    Don't be scared and ignore the non-English part of such comments. If you want to change something in a comment like this, then do it. Even if you do it wrong, we'll tell you how to fix it during the Pull Request.
+    Don't be scared and ignore the non-English part of such comments. If you want to change a comment like this, then feel free to do so. Even if you do it wrong, we'll tell you how to fix it during the Pull Request.
 
 
 ## License
