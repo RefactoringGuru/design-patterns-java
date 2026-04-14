@@ -20,6 +20,7 @@ public class CarBuilder implements Builder {
     private TripComputer tripComputer;
     private GPSNavigator gpsNavigator;
 
+    @Override
     public void setCarType(CarType type) {
         this.type = type;
     }
